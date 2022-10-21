@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/ourMainFocus.scss";
+// import "./style/ourMainFocus.scss";
 
 const OurMainFocus = () => {
   return (

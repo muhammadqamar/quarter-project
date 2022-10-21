@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/areaProperties.scss";
+// import "./style/areaProperties.scss";
 
 const AreaProperties = () => {
   return (

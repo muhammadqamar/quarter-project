@@ -1,6 +1,11 @@
 import React from "react";
 // import "./style/index.scss";
-
+import OurMainFocus from "./ourMainFocus";
+import AreaProperties from "./areaProperties";
+import FeaturedListings from "./featuredListings";
+import ClientsFeedback from "./clientsFeedback";
+import ClientsLogoSlider from "./clientsLogoSlider";
+import NewsBlog from "./newsBlogs";
 const Index = () => {
   return (
     <>
@@ -269,6 +274,12 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <OurMainFocus />
+      <AreaProperties />
+      <FeaturedListings />
+      <ClientsFeedback />
+      <ClientsLogoSlider />
+      <NewsBlog />
     </>
   );
 };

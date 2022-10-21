@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/clientsLogoSlider.scss";
+// import "./style/clientsLogoSlider.scss";
 
 const ClientsLogoSlider = () => {
   return (

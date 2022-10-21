@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/clientsFeedback.scss";
+// import "./style/clientsFeedback.scss";
 
 const ClientsFeedback = () => {
   return (

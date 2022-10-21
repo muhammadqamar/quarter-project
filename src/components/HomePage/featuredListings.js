@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/featuredListings.scss";
+// import "./style/featuredListings.scss";
 
 const FeaturedListings = () => {
   return (
