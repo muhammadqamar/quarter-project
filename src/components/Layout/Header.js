@@ -144,7 +144,8 @@ const Index = () => {
                           </li>
                           <li>
                             <a href="index-5.html">
-                              Home Style 05 <span class="menu-item-badge">video</span>
+                              Home Style 05{" "}
+                              <span class="menu-item-badge">video</span>
                             </a>
                             <img src="images/home-5.jpg" alt="#" />
                           </li>
@@ -166,7 +167,8 @@ const Index = () => {
                           </li>
                           <li>
                             <a href="index-10.html">
-                              Home Style 10 <span class="menu-item-badge">Map</span>
+                              Home Style 10{" "}
+                              <span class="menu-item-badge">Map</span>
                             </a>
                             <img src="images/home-10.jpg" alt="#" />
                           </li>
@@ -195,7 +197,9 @@ const Index = () => {
                             <a href="portfolio-2.html">Portfolio - 02</a>
                           </li>
                           <li>
-                            <a href="portfolio-details.html">Portfolio Details</a>
+                            <a href="portfolio-details.html">
+                              Portfolio Details
+                            </a>
                           </li>
                           <li>
                             <a href="team.html">Team</a>
@@ -221,10 +225,14 @@ const Index = () => {
                             <a href="shop-grid.html">Shop Grid</a>
                           </li>
                           <li>
-                            <a href="shop-left-sidebar.html">Shop Left sidebar</a>
+                            <a href="shop-left-sidebar.html">
+                              Shop Left sidebar
+                            </a>
                           </li>
                           <li>
-                            <a href="shop-right-sidebar.html">Shop right sidebar</a>
+                            <a href="shop-right-sidebar.html">
+                              Shop right sidebar
+                            </a>
                           </li>
                           <li>
                             <a href="product-details.html">Shop details </a>
@@ -269,19 +277,23 @@ const Index = () => {
                             <a href="blog-grid.html">News Grid</a>
                           </li>
                           <li>
-                            <a href="blog-left-sidebar.html">News Left sidebar</a>
+                            <a href="blog-left-sidebar.html">
+                              News Left sidebar
+                            </a>
                           </li>
                           <li>
-                            <a href="blog-right-sidebar.html">News Right sidebar</a>
+                            <a href="blog-right-sidebar.html">
+                              News Right sidebar
+                            </a>
                           </li>
                           <li>
                             <a href="blog-details.html">News details</a>
                           </li>
                         </ul>
                       </li>
-                      <li class="menu-icon">
+                      <li class="menu-icon mega-menu-parent">
                         <a href="#">Pages</a>
-                        <ul class="mega-menu">
+                        <ul class="mega-menu column-4">
                           <li>
                             <a href="#">Inner Pages</a>
                             <ul>
@@ -292,7 +304,9 @@ const Index = () => {
                                 <a href="portfolio-2.html">Portfolio - 02</a>
                               </li>
                               <li>
-                                <a href="portfolio-details.html">Portfolio Details</a>
+                                <a href="portfolio-details.html">
+                                  Portfolio Details
+                                </a>
                               </li>
                               <li>
                                 <a href="team.html">Team</a>
@@ -315,7 +329,9 @@ const Index = () => {
                                 <a href="add-listing.html">Add Listing</a>
                               </li>
                               <li>
-                                <a href="locations.html">Google Map Locations</a>
+                                <a href="locations.html">
+                                  Google Map Locations
+                                </a>
                               </li>
                               <li>
                                 <a href="404.html">404</a>
@@ -335,10 +351,14 @@ const Index = () => {
                                 <a href="shop.html">Shop</a>
                               </li>
                               <li>
-                                <a href="shop-left-sidebar.html">Shop Left sidebar</a>
+                                <a href="shop-left-sidebar.html">
+                                  Shop Left sidebar
+                                </a>
                               </li>
                               <li>
-                                <a href="shop-right-sidebar.html">Shop right sidebar</a>
+                                <a href="shop-right-sidebar.html">
+                                  Shop right sidebar
+                                </a>
                               </li>
                               <li>
                                 <a href="shop-grid.html">Shop Grid</a>

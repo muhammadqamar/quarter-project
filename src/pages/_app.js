@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/style/global.css";
 import "../assets/style/font-icons.css";
 import "../assets/style/responsive.css";
-import "../assets/style/plugins.css";
+// import "../assets/style/plugins.css";
 // import "../assets/js/main";
 // // import "../assets/js/plugins";
 import "slick-carousel/slick/slick.css";
