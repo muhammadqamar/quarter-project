@@ -1,11 +1,41 @@
 import Head from "next/head";
 import Image from "next/image";
-import Layout from "../components/Layout";
+import Header from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
+import CallToAction from "../components/CallToAction";
 
 export default function Home() {
   return (
     <div>
-      <Layout />
+      <Header />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <CallToAction />
+      <Footer />
     </div>
   );
 }
