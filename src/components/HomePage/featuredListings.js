@@ -9,8 +9,16 @@ const FeaturedListings = () => {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-    // nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+    prevArrow: (
+      <a class="slick-prev slick-arrow">
+        <i class="fas fa-arrow-left" alt="Arrow Icon"></i>
+      </a>
+    ),
+    nextArrow: (
+      <a class="slick-next slick-arrow">
+        <i class="fas fa-arrow-right" alt="Arrow Icon"></i>
+      </a>
+    ),
     responsive: [
       {
         breakpoint: 1800,
@@ -105,8 +113,7 @@ const FeaturedListings = () => {
                         <ul>
                           <li>
                             <a href="locations.html">
-                              <i className="flaticon-pin"></i> Belmont Gardens,
-                              Chicago
+                              <i className="flaticon-pin"></i> Belmont Gardens, Chicago
                             </a>
                           </li>
                         </ul>
@@ -201,10 +208,7 @@ const FeaturedListings = () => {
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="product-details.html"
-                            title="Product Details"
-                          >
+                          <a href="product-details.html" title="Product Details">
                             <i className="flaticon-add"></i>
                           </a>
                         </li>
@@ -230,8 +234,7 @@ const FeaturedListings = () => {
                         <ul>
                           <li>
                             <a href="locations.html">
-                              <i className="flaticon-pin"></i> Belmont Gardens,
-                              Chicago
+                              <i className="flaticon-pin"></i> Belmont Gardens, Chicago
                             </a>
                           </li>
                         </ul>
@@ -326,10 +329,7 @@ const FeaturedListings = () => {
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="product-details.html"
-                            title="Product Details"
-                          >
+                          <a href="product-details.html" title="Product Details">
                             <i className="flaticon-add"></i>
                           </a>
                         </li>
@@ -355,8 +355,7 @@ const FeaturedListings = () => {
                         <ul>
                           <li>
                             <a href="locations.html">
-                              <i className="flaticon-pin"></i> Belmont Gardens,
-                              Chicago
+                              <i className="flaticon-pin"></i> Belmont Gardens, Chicago
                             </a>
                           </li>
                         </ul>
@@ -451,10 +450,7 @@ const FeaturedListings = () => {
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="product-details.html"
-                            title="Product Details"
-                          >
+                          <a href="product-details.html" title="Product Details">
                             <i className="flaticon-add"></i>
                           </a>
                         </li>
@@ -480,8 +476,7 @@ const FeaturedListings = () => {
                         <ul>
                           <li>
                             <a href="locations.html">
-                              <i className="flaticon-pin"></i> Belmont Gardens,
-                              Chicago
+                              <i className="flaticon-pin"></i> Belmont Gardens, Chicago
                             </a>
                           </li>
                         </ul>
@@ -509,9 +504,7 @@ const FeaturedListings = () => {
                       </span>
                     </div>
                     <h2 className="product-title">
-                      <a href="product-details.html">
-                        Luxury villa in Rego Park{" "}
-                      </a>
+                      <a href="product-details.html">Luxury villa in Rego Park </a>
                     </h2>
                     <div className="product-description">
                       <p>
@@ -578,10 +571,7 @@ const FeaturedListings = () => {
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="product-details.html"
-                            title="Product Details"
-                          >
+                          <a href="product-details.html" title="Product Details">
                             <i className="flaticon-add"></i>
                           </a>
                         </li>
@@ -607,8 +597,7 @@ const FeaturedListings = () => {
                         <ul>
                           <li>
                             <a href="locations.html">
-                              <i className="flaticon-pin"></i> Belmont Gardens,
-                              Chicago
+                              <i className="flaticon-pin"></i> Belmont Gardens, Chicago
                             </a>
                           </li>
                         </ul>
@@ -636,9 +625,7 @@ const FeaturedListings = () => {
                       </span>
                     </div>
                     <h2 className="product-title">
-                      <a href="product-details.html">
-                        Beautiful Flat in Manhattan{" "}
-                      </a>
+                      <a href="product-details.html">Beautiful Flat in Manhattan </a>
                     </h2>
                     <div className="product-description">
                       <p>
@@ -705,10 +692,7 @@ const FeaturedListings = () => {
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="product-details.html"
-                            title="Product Details"
-                          >
+                          <a href="product-details.html" title="Product Details">
                             <i className="flaticon-add"></i>
                           </a>
                         </li>
@@ -719,20 +703,6 @@ const FeaturedListings = () => {
               </div>
             </Slider>
           </div>
-        </div>
-      </div>
-      <div className="ltn__video-popup-area ltn__video-popup-margin---">
-        <div
-          className="ltn__video-bg-img ltn__video-popup-height-600--- bg-overlay-black-30 bg-image bg-fixed ltn__animation-pulse1"
-          data-bs-bg="img/bg/19.jpg"
-        >
-          <a
-            className="ltn__video-icon-2 ltn__video-icon-2-border---"
-            href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&showinfo=0"
-            data-rel="lightcase:myCollection"
-          >
-            <i className="fa fa-play"></i>
-          </a>
         </div>
       </div>
     </>
