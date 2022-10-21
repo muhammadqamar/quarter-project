@@ -1,6 +1,6 @@
 import React from "react";
 
-const Index = () => {
+const CallToAction = () => {
   return (
     <div
       class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
@@ -27,4 +27,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default CallToAction;
