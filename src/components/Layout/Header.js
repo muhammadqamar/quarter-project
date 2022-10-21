@@ -1,4 +1,22 @@
+import React, { useState, useEffect } from "react";
+
 const Index = () => {
+  const [chColor, setChColor] = useState(false);
+
+  const ScrollDown = () => {
+    if (window.scrollY >= 230) {
+      setChColor(true);
+    } else {
+      setChColor(false);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", ScrollDown);
+    }
+  }, []);
+
   return (
     <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---">
       {/*ltn__header-top-area start*/}
@@ -95,7 +113,13 @@ const Index = () => {
       {/* ltn__header-top-area end */}
 
       {/*  ltn__header-middle-area start */}
-      <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black">
+      <div
+        class={`${
+          chColor
+            ? "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black sticky-active"
+            : "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black"
+        }`}
+      >
         <div class="container">
           <div class="row">
             <div class="col">
