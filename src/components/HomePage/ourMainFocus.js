@@ -18,9 +18,9 @@ const OurMainFocus = () => {
           <div className="col-lg-4 col-sm-6 col-12">
             <div className="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
               <div className="ltn__feature-icon">
-                <span>
+                {/* <span>
                   <i className="flaticon-house"></i>
-                </span>
+                </span> */}
                 <img src="images/21.png" alt="#" />
               </div>
               <div className="ltn__feature-info">
@@ -40,9 +40,9 @@ const OurMainFocus = () => {
           <div className="col-lg-4 col-sm-6 col-12">
             <div className="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
               <div className="ltn__feature-icon">
-                <span>
+                {/* <span>
                   <i className="flaticon-house-3"></i>
-                </span>
+                </span> */}
                 <img src="images/22.png" alt="#" />
               </div>
               <div className="ltn__feature-info">
@@ -62,9 +62,9 @@ const OurMainFocus = () => {
           <div className="col-lg-4 col-sm-6 col-12">
             <div className="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
               <div className="ltn__feature-icon">
-                <span>
+                {/* <span>
                   <i className="flaticon-deal-1"></i>
-                </span>
+                </span> */}
                 <img src="images/23.png" alt="#" />
               </div>
               <div className="ltn__feature-info">
