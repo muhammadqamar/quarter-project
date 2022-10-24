@@ -1,8 +1,132 @@
 import React, { useState, useEffect } from "react";
 
+const mobileMenuList = [
+  {
+    list: "Search",
+    list_link: "https://www.kakaako.com/property-search/search-form/",
+    dropDownList: [
+      {
+        taglink: "https://www.kakaako.com/ward-village/",
+        taglist: "Ward Village",
+      },
+      {
+        taglink:
+          "https://www.hawaiiliving.com/oahu/honolulu/metro/kakaako-condos/",
+        taglist: "Active Listings",
+      },
+      {
+        taglink: "https://www.kakaako.com/property-search/search-form/",
+        taglist: "Advanced Search",
+      },
+    ],
+  },
+  {
+    list: "Condo",
+    list_link: "",
+    dropDownList: [
+      {
+        taglink: "https://www.kakaako.com/condo/kalae/",
+        taglist: "Kalae",
+      },
+      {
+        taglink: "https://www.kakaako.com/condo/koula/",
+        taglist: "Ko'ula",
+      },
+      {
+        taglink: "https://www.kakaako.com/condo/aalii/",
+        taglist: "'A'ali'i",
+      },
+      { taglink: "https://www.kakaako.com/condo/anaha/", taglist: "Anaha" },
+      { taglink: "https://www.kakaako.com/condo/aeo/", taglist: "Ae'o" },
+      { taglink: "https://www.kakaako.com/condo/waiea/", taglist: "Waiea" },
+      {
+        taglink: "https://www.kakaako.com/condo/victoria-place/",
+        taglist: "Victoria Place",
+      },
+      {
+        taglink: "https://www.kakaako.com/condo/park-ward/",
+        taglist: "The Park on Ward",
+      },
+    ],
+  },
+  {
+    list: "Blog",
+    list_link: "https://corcoranpacific.com/blog/",
+    dropDownList: [
+      {
+        taglink: "https://www.kakaako.com/condo/popular-condos/",
+        taglist: "Popular Condos in 2022",
+      },
+      { taglink: "", taglist: "Friend and Family Sale" },
+    ],
+  },
+  {
+    list: "Buyers",
+    list_link: "https://www.kakaako.com/buyers/",
+    dropDownList: [
+      {
+        taglink: "https://www.kakaako.com/buyers/mortgage-calculator/",
+        taglist: "Mortgage Calculator",
+      },
+      { taglink: "", taglist: "Mortgage Pre-Approval" },
+      { taglink: "", taglist: "Affordable Housing" },
+      { taglink: "", taglist: "First Time Buyers" },
+      { taglink: "", taglist: "Personalized Home Search" },
+    ],
+  },
+  {
+    list: "Sellers",
+    list_link: "https://www.kakaako.com/sellers/",
+    dropDownList: [
+      {
+        taglink: "https://www.kakaako.com/sellers/",
+        taglist: " Selling A Home",
+      },
+      { taglink: "", taglist: "Pricing Your Home" },
+      { taglink: "", taglist: "Flat Fee Listing" },
+      { taglink: "", taglist: "Virtual Staging" },
+      { taglink: "", taglist: "Free Market Analysis" },
+    ],
+  },
+  {
+    list: "Property Management",
+    list_link: "",
+    dropDownList: [
+      {
+        taglink: "https://www.happydoorspropertymanagement.com/pricing/",
+        taglist: "Our Process",
+      },
+      {
+        taglink: "https://www.happydoorspropertymanagement.com/pricing/",
+        taglist: "Pricing",
+      },
+    ],
+  },
+  {
+    list: "Contact",
+    list_link: "https://www.kakaako.com/contact/",
+    dropDownList: [
+      {
+        taglink: "",
+        taglist: "About",
+      },
+      {
+        taglink: "",
+        taglist: "Schedule a Showing",
+      },
+      {
+        taglink:
+          "https://www.coldwellbankerhomes.com/hi/honolulu/office/honolulu/oid_451/#",
+        taglist: "Request a Home Valuation",
+      },
+    ],
+  },
+];
+
 const Index = () => {
   const [chColor, setChColor] = useState(false);
   const [show, setShow] = useState(false);
+  const [active, setActive] = useState(false);
 
   const ScrollDown = () => {
     if (window.scrollY >= 230) {
@@ -149,244 +273,24 @@ const Index = () => {
                   <nav>
                     <div class="ltn__main-menu">
                       <ul>
-                        <li class="menu-icon">
-                          <a href="#">Home</a>
-                          <ul class="sub-menu menu-pages-img-show">
-                            <li>
-                              <a href="index.html">Home Style 01</a>
-                              <img src="images/home-1.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-2.html">Home Style 02</a>
-                              <img src="images/home-2.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-3.html">Home Style 03</a>
-                              <img src="images/home-3.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-4.html">Home Style 04</a>
-                              <img src="images/home-4.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-5.html">
-                                Home Style 05 <span class="menu-item-badge">video</span>
-                              </a>
-                              <img src="images/home-5.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-6.html">Home Style 06</a>
-                              <img src="images/home-6.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-7.html">Home Style 07</a>
-                              <img src="images/home-7.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-8.html">Home Style 08</a>
-                              <img src="images/home-8.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-9.html">Home Style 09</a>
-                              <img src="images/home-9.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-10.html">
-                                Home Style 10 <span class="menu-item-badge">Map</span>
-                              </a>
-                              <img src="images/home-10.jpg" alt="#" />
-                            </li>
-                            <li>
-                              <a href="index-11.html">Home Style 11</a>
-                              <img src="images/home-11.jpg" alt="#" />
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="menu-icon">
-                          <a href="#">About</a>
-                          <ul>
-                            <li>
-                              <a href="about.html">About</a>
-                            </li>
-                            <li>
-                              <a href="service.html">Services</a>
-                            </li>
-                            <li>
-                              <a href="service-details.html">Service Details</a>
-                            </li>
-                            <li>
-                              <a href="portfolio.html">Portfolio</a>
-                            </li>
-                            <li>
-                              <a href="portfolio-2.html">Portfolio - 02</a>
-                            </li>
-                            <li>
-                              <a href="portfolio-details.html">Portfolio Details</a>
-                            </li>
-                            <li>
-                              <a href="team.html">Team</a>
-                            </li>
-                            <li>
-                              <a href="team-details.html">Team Details</a>
-                            </li>
-                            <li>
-                              <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                              <a href="locations.html">Google Map Locations</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="menu-icon">
-                          <a href="#">Shop</a>
-                          <ul>
-                            <li>
-                              <a href="shop.html">Shop</a>
-                            </li>
-                            <li>
-                              <a href="shop-grid.html">Shop Grid</a>
-                            </li>
-                            <li>
-                              <a href="shop-left-sidebar.html">Shop Left sidebar</a>
-                            </li>
-                            <li>
-                              <a href="shop-right-sidebar.html">Shop right sidebar</a>
-                            </li>
-                            <li>
-                              <a href="product-details.html">Shop details </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Other Pages <span class="float-end">{">>"}</span>
-                              </a>
-                              <ul>
-                                <li>
-                                  <a href="cart.html">Cart</a>
-                                </li>
-                                <li>
-                                  <a href="wishlist.html">Wishlist</a>
-                                </li>
-                                <li>
-                                  <a href="checkout.html">Checkout</a>
-                                </li>
-                                <li>
-                                  <a href="order-tracking.html">Order Tracking</a>
-                                </li>
-                                <li>
-                                  <a href="account.html">My Account</a>
-                                </li>
-                                <li>
-                                  <a href="login.html">Sign in</a>
-                                </li>
-                                <li>
-                                  <a href="register.html">Register</a>
-                                </li>
+                        {mobileMenuList.map((item, index) => (
+                          <>
+                            <li key={index} class="menu-icon active">
+                              <a href={item.list_link}>{item.list}</a>
+                              <ul
+                                class="sub-menu menu-pages-img-show"
+                                style={{ display: show === "none" }}
+                              >
+                                {item.dropDownList.map((item, index) => (
+                                  <li key={index}>
+                                    <a href={item.taglink}>{item.taglist}</a>
+                                    {/* <img src="images/home-1.jpg" alt="#" /> */}
+                                  </li>
+                                ))}
                               </ul>
                             </li>
-                          </ul>
-                        </li>
-                        <li class="menu-icon">
-                          <a href="#">News</a>
-                          <ul>
-                            <li>
-                              <a href="blog.html">News</a>
-                            </li>
-                            <li>
-                              <a href="blog-grid.html">News Grid</a>
-                            </li>
-                            <li>
-                              <a href="blog-left-sidebar.html">News Left sidebar</a>
-                            </li>
-                            <li>
-                              <a href="blog-right-sidebar.html">News Right sidebar</a>
-                            </li>
-                            <li>
-                              <a href="blog-details.html">News details</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="menu-icon mega-menu-parent">
-                          <a href="#">Pages</a>
-                          <ul class="mega-menu column-4">
-                            <li>
-                              <a href="#">Inner Pages</a>
-                              <ul>
-                                <li>
-                                  <a href="portfolio.html">Portfolio</a>
-                                </li>
-                                <li>
-                                  <a href="portfolio-2.html">Portfolio - 02</a>
-                                </li>
-                                <li>
-                                  <a href="portfolio-details.html">Portfolio Details</a>
-                                </li>
-                                <li>
-                                  <a href="team.html">Team</a>
-                                </li>
-                                <li>
-                                  <a href="team-details.html">Team Details</a>
-                                </li>
-                                <li>
-                                  <a href="faq.html">FAQ</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <a href="#">Inner Pages</a>
-                              <ul>
-                                <li>
-                                  <a href="history.html">History</a>
-                                </li>
-                                <li>
-                                  <a href="add-listing.html">Add Listing</a>
-                                </li>
-                                <li>
-                                  <a href="locations.html">Google Map Locations</a>
-                                </li>
-                                <li>
-                                  <a href="404.html">404</a>
-                                </li>
-                                <li>
-                                  <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                  <a href="coming-soon.html">Coming Soon</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <a href="#">Shop Pages</a>
-                              <ul>
-                                <li>
-                                  <a href="shop.html">Shop</a>
-                                </li>
-                                <li>
-                                  <a href="shop-left-sidebar.html">Shop Left sidebar</a>
-                                </li>
-                                <li>
-                                  <a href="shop-right-sidebar.html">Shop right sidebar</a>
-                                </li>
-                                <li>
-                                  <a href="shop-grid.html">Shop Grid</a>
-                                </li>
-                                <li>
-                                  <a href="product-details.html">Shop details </a>
-                                </li>
-                                <li>
-                                  <a href="cart.html">Cart</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <a href="shop.html">
-                                <img src="images/menu-banner-1.jpg" alt="#" />
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contact</a>
-                        </li>
+                          </>
+                        ))}
                         <li class="special-link">
                           <a href="add-listing.html">Add Listing</a>
                         </li>
@@ -397,8 +301,15 @@ const Index = () => {
               </div>
               <div class="col--- ltn__header-options ltn__header-options-2">
                 {/*Mobile Menu Button*/}
-                <div onClick={() => setShow(true)} class="mobile-menu-toggle d-xl-none">
-                  <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                <div
+                  onClick={() => setShow(true)}
+                  class="mobile-menu-toggle d-xl-none"
+                  style={{ display: show === false ? "block" : "none" }}
+                >
+                  <a
+                    href="#ltn__utilize-mobile-menu"
+                    class="ltn__utilize-toggle"
+                  >
                     <svg viewBox="0 0 800 600">
                       <path
                         d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
@@ -408,9 +319,21 @@ const Index = () => {
                       <path
                         d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
                         id="bottom"
-                        transform="translate(480, 320) scale(1, -1) translate(-480, -318) "
+                        transform="translate(480, 320) scale(1, -1) translate(-480, -318)"
                       />
                     </svg>
+                  </a>
+                </div>
+                <div
+                  onClick={() => setShow(false)}
+                  class="mobile-menu-toggle d-xl-none"
+                  style={{ display: show === false ? "none" : "block" }}
+                >
+                  <a
+                    href="#ltn__utilize-mobile-menu"
+                    class="ltn__utilize-toggle"
+                  >
+                    <img src="/images/close_mobile_menu.svg" alt="close icon" />
                   </a>
                 </div>
               </div>
@@ -420,7 +343,10 @@ const Index = () => {
         {/* ltn__header-middle-area end*/}
       </header>
       {show === true && (
-        <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div
+          id="ltn__utilize-mobile-menu"
+          class="ltn__utilize ltn__utilize-mobile-menu ltn__utilize-open"
+        >
           <div class="ltn__utilize-menu-inner ltn__scrollbar">
             <div class="ltn__utilize-menu-head">
               <div class="site-logo">
@@ -428,7 +354,9 @@ const Index = () => {
                   <img src="images/logo.png" alt="Logo" />
                 </a>
               </div>
-              <button class="ltn__utilize-close">×</button>
+              <button onClick={() => setShow(false)} class="ltn__utilize-close">
+                ×
+              </button>
             </div>
             <div class="ltn__utilize-menu-search-form">
               <form action="#">
@@ -440,198 +368,312 @@ const Index = () => {
             </div>
             <div class="ltn__utilize-menu">
               <ul>
-                <li>
-                  <a href="#">Home</a>
-                  <ul class="sub-menu">
+                {mobileMenuList.map((item, index) => (
+                  <>
+                    <li
+                      onClick={() => setActive(index)}
+                      key={index}
+                      class="menu-icon"
+                    >
+                      <a class="active">{item.list}</a>
+                      <ul
+                        class="sub-menu"
+                        style={{ display: active === index ? "block" : "none" }}
+                      >
+                        {item.dropDownList.map((item, index) => (
+                          <li key={index}>
+                            <a href={item.taglink}>{item.taglist}</a>
+                            {/* <img src="images/home-1.jpg" alt="#" /> */}
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  </>
+                ))}
+                {/* <li class="menu-icon">
+                  <a href="">Condo</a>
+                  <ul style={{ display: "none" }}>
                     <li>
-                      <a href="index.html">Home Style 01</a>
+                      <a href="https://www.kakaako.com/condo/kalae/">Kalae</a>
                     </li>
                     <li>
-                      <a href="index-2.html">Home Style 02</a>
-                    </li>
-                    <li>
-                      <a href="index-3.html">Home Style 03</a>
-                    </li>
-                    <li>
-                      <a href="index-4.html">Home Style 04</a>
-                    </li>
-                    <li>
-                      <a href="index-5.html">
-                        Home Style 05 <span class="menu-item-badge">video</span>
+                      <a href="https://www.kakaako.com/condo/koula/">
+                        Ko&apos;ula
                       </a>
                     </li>
                     <li>
-                      <a href="index-6.html">Home Style 06</a>
-                    </li>
-                    <li>
-                      <a href="index-7.html">Home Style 07</a>
-                    </li>
-                    <li>
-                      <a href="index-8.html">Home Style 08</a>
-                    </li>
-                    <li>
-                      <a href="index-9.html">Home Style 09</a>
-                    </li>
-                    <li>
-                      <a href="index-10.html">
-                        Home Style 10 <span class="menu-item-badge">Map</span>
+                      <a href="https://www.kakaako.com/condo/aalii/">
+                        &apos;A&apos;ali&apos;i
                       </a>
                     </li>
                     <li>
-                      <a href="index-11.html">Home Style 11</a>
+                      <a href="https://www.kakaako.com/condo/anaha/">Anaha</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/aeo/">Ae&apos;o</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/waiea/">Waiea</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/victoria-place/">
+                        Victoria Place
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/park-ward/">
+                        The Park on Ward
+                      </a>
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">About</a>
-                  <ul class="sub-menu">
+                <li class="menu-icon">
+                  <a href="https://corcoranpacific.com/blog/">Blog</a>
+                  <ul style={{ display: "none" }}>
                     <li>
-                      <a href="about.html">About</a>
+                      <a href="https://www.kakaako.com/condo/popular-condos/">
+                        Popular Condos in 2022
+                      </a>
                     </li>
                     <li>
-                      <a href="service.html">Services</a>
-                    </li>
-                    <li>
-                      <a href="service-details.html">Service Details</a>
-                    </li>
-                    <li>
-                      <a href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
-                      <a href="portfolio-2.html">Portfolio - 02</a>
-                    </li>
-                    <li>
-                      <a href="portfolio-details.html">Portfolio Details</a>
-                    </li>
-                    <li>
-                      <a href="team.html">Team</a>
-                    </li>
-                    <li>
-                      <a href="team-details.html">Team Details</a>
-                    </li>
-                    <li>
-                      <a href="faq.html">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="locations.html">Google Map Locations</a>
+                      <a href="">Friend and Family Sale</a>
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">Shop</a>
-                  <ul class="sub-menu">
+                <li class="menu-icon">
+                  <a href="https://www.kakaako.com/buyers/">Buyers</a>
+                  <ul style={{ display: "none" }}>
                     <li>
-                      <a href="shop.html">Shop</a>
+                      <a href="https://www.kakaako.com/buyers/mortgage-calculator/">
+                        Mortgage Calculator
+                      </a>
                     </li>
                     <li>
-                      <a href="shop-grid.html">Shop Grid</a>
+                      <a href="">Mortgage Pre-Approval</a>
                     </li>
                     <li>
-                      <a href="shop-left-sidebar.html">Shop Left sidebar</a>
+                      <a href="">Affordable Housing</a>
                     </li>
                     <li>
-                      <a href="shop-right-sidebar.html">Shop right sidebar</a>
+                      <a href="">First Time Buyers</a>
                     </li>
                     <li>
-                      <a href="product-details.html">Shop details </a>
-                    </li>
-                    <li>
-                      <a href="cart.html">Cart</a>
-                    </li>
-                    <li>
-                      <a href="wishlist.html">Wishlist</a>
-                    </li>
-                    <li>
-                      <a href="checkout.html">Checkout</a>
-                    </li>
-                    <li>
-                      <a href="order-tracking.html">Order Tracking</a>
-                    </li>
-                    <li>
-                      <a href="account.html">My Account</a>
-                    </li>
-                    <li>
-                      <a href="login.html">Sign in</a>
-                    </li>
-                    <li>
-                      <a href="register.html">Register</a>
+                      <a href="">Personalized Home Search </a>
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">News</a>
-                  <ul class="sub-menu">
+                <li class="menu-icon">
+                  <a href="https://www.kakaako.com/sellers/">Sellers</a>
+                  <ul style={{ display: "none" }}>
                     <li>
-                      <a href="blog.html">News</a>
+                      <a href="https://www.kakaako.com/sellers/">
+                        Selling A Home
+                      </a>
                     </li>
                     <li>
-                      <a href="blog-grid.html">News Grid</a>
+                      <a href="">Pricing Your Home</a>
                     </li>
                     <li>
-                      <a href="blog-left-sidebar.html">News Left sidebar</a>
+                      <a href="">Flat Fee Listing</a>
                     </li>
                     <li>
-                      <a href="blog-right-sidebar.html">News Right sidebar</a>
+                      <a href="">Virtual Staging</a>
                     </li>
                     <li>
-                      <a href="blog-details.html">News details</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Pages</a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="service.html">Services</a>
-                    </li>
-                    <li>
-                      <a href="service-details.html">Service Details</a>
-                    </li>
-                    <li>
-                      <a href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
-                      <a href="portfolio-2.html">Portfolio - 02</a>
-                    </li>
-                    <li>
-                      <a href="portfolio-details.html">Portfolio Details</a>
-                    </li>
-                    <li>
-                      <a href="team.html">Team</a>
-                    </li>
-                    <li>
-                      <a href="team-details.html">Team Details</a>
-                    </li>
-                    <li>
-                      <a href="faq.html">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="history.html">History</a>
-                    </li>
-                    <li>
-                      <a href="add-listing.html">Add Listing</a>
-                    </li>
-                    <li>
-                      <a href="locations.html">Google Map Locations</a>
-                    </li>
-                    <li>
-                      <a href="404.html">404</a>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                      <a href="coming-soon.html">Coming Soon</a>
+                      <a href="">Free Market Analysis</a>
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a href="contact.html">Contact</a>
+                <li class="menu-icon">
+                  <a href="">Property Management</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="https://www.happydoorspropertymanagement.com/pricing/">
+                        Our Process
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.happydoorspropertymanagement.com/pricing/">
+                        Pricing
+                      </a>
+                    </li>
+                  </ul>
                 </li>
+                <li class="menu-icon">
+                  <a href="https://www.kakaako.com/contact/">Contact</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="">About</a>
+                    </li>
+                    <li>
+                      <a href="">Schedule a Showing</a>
+                    </li>
+                    <li>
+                      <a href="https://www.coldwellbankerhomes.com/hi/honolulu/office/honolulu/oid_451/#">
+                        Request a Home Valuation
+                      </a>
+                    </li>
+                  </ul>
+                </li> */}
               </ul>
+              {/* <ul>
+                <li class="menu-icon active">
+                  <a href="https://www.kakaako.com/property-search/search-form/">
+                    Search
+                  </a>
+                  <ul
+                    class="sub-menu menu-pages-img-show"
+                    style={{ display: show === "none" }}
+                  >
+                    <li>
+                      <a href="https://www.kakaako.com/ward-village/">
+                        Ward Village
+                      </a>
+                     
+                    </li>
+                    <li>
+                      <a href="https://www.hawaiiliving.com/oahu/honolulu/metro/kakaako-condos/">
+                        Active Listings
+                      </a>
+                      
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/property-search/search-form/">
+                        Advanced Search
+                      </a>
+                      
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-icon">
+                  <a href="">Condo</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/kalae/">Kalae</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/koula/">
+                        Ko&apos;ula
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/aalii/">
+                        &apos;A&apos;ali&apos;i
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/anaha/">Anaha</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/aeo/">Ae&apos;o</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/waiea/">Waiea</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/victoria-place/">
+                        Victoria Place
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/park-ward/">
+                        The Park on Ward
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-icon">
+                  <a href="https://corcoranpacific.com/blog/">Blog</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="https://www.kakaako.com/condo/popular-condos/">
+                        Popular Condos in 2022
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Friend and Family Sale</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-icon">
+                  <a href="https://www.kakaako.com/buyers/">Buyers</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="https://www.kakaako.com/buyers/mortgage-calculator/">
+                        Mortgage Calculator
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Mortgage Pre-Approval</a>
+                    </li>
+                    <li>
+                      <a href="">Affordable Housing</a>
+                    </li>
+                    <li>
+                      <a href="">First Time Buyers</a>
+                    </li>
+                    <li>
+                      <a href="">Personalized Home Search </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-icon">
+                  <a href="https://www.kakaako.com/sellers/">Sellers</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="https://www.kakaako.com/sellers/">
+                        Selling A Home
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Pricing Your Home</a>
+                    </li>
+                    <li>
+                      <a href="">Flat Fee Listing</a>
+                    </li>
+                    <li>
+                      <a href="">Virtual Staging</a>
+                    </li>
+                    <li>
+                      <a href="">Free Market Analysis</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-icon">
+                  <a href="">Property Management</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="https://www.happydoorspropertymanagement.com/pricing/">
+                        Our Process
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.happydoorspropertymanagement.com/pricing/">
+                        Pricing
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-icon">
+                  <a href="https://www.kakaako.com/contact/">Contact</a>
+                  <ul style={{ display: "none" }}>
+                    <li>
+                      <a href="">About</a>
+                    </li>
+                    <li>
+                      <a href="">Schedule a Showing</a>
+                    </li>
+                    <li>
+                      <a href="https://www.coldwellbankerhomes.com/hi/honolulu/office/honolulu/oid_451/#">
+                        Request a Home Valuation
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="special-link">
+                  <a href="add-listing.html">Add Listing</a>
+                </li>
+              </ul> */}
             </div>
             <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
               <ul>
