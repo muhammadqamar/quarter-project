@@ -22,7 +22,7 @@ const mobileMenuList = [
   },
   {
     list: "Condo",
-    list_link: "",
+    list_link: "javascript:void(0)",
     dropDownList: [
       {
         taglink: "https://www.kakaako.com/condo/kalae/",
@@ -90,7 +90,7 @@ const mobileMenuList = [
   },
   {
     list: "Property Management",
-    list_link: "",
+    list_link: "javascript:void(0)",
     dropDownList: [
       {
         taglink: "https://www.happydoorspropertymanagement.com/pricing/",
@@ -129,7 +129,7 @@ const Index = () => {
   const [active, setActive] = useState(false);
 
   const ScrollDown = () => {
-    if (window.scrollY >= 230) {
+    if (window.scrollY >= 130) {
       setChColor(true);
     } else {
       setChColor(false);
@@ -146,7 +146,7 @@ const Index = () => {
     <>
       <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---">
         {/*ltn__header-top-area start*/}
-        <div class="ltn__header-top-area top-area-color-white">
+        {/* <div class="ltn__header-top-area top-area-color-white">
           <div class="container">
             <div class="row">
               <div class="col-md-7">
@@ -170,7 +170,6 @@ const Index = () => {
                   <div class="ltn__top-bar-menu">
                     <ul>
                       <li>
-                        {/* ltn__language-menu */}
                         <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
                           <ul>
                             <li>
@@ -202,7 +201,7 @@ const Index = () => {
                         </div>
                       </li>
                       <li>
-                        {/* ltn__social-media*/}
+ 
                         <div class="ltn__social-media">
                           <ul>
                             <li>
@@ -235,7 +234,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* ltn__header-top-area end */}
 
         {/*  ltn__header-middle-area start */}
@@ -247,8 +246,8 @@ const Index = () => {
           }`}
         >
           <div class="container">
-            <div class="row">
-              <div class="col">
+            <div class="row header_row_wrap">
+              <div class="col-2">
                 <div class="site-logo-wrap">
                   <div class="site-logo">
                     <a href="index.html">
@@ -284,7 +283,11 @@ const Index = () => {
                                 {item.dropDownList.map((item, index) => (
                                   <li key={index}>
                                     <a href={item.taglink}>{item.taglist}</a>
-                                    {/* <img src="images/home-1.jpg" alt="#" /> */}
+                                    {/* {index === 1 ? (
+                                      <img src="images/home-1.jpg" alt="#" />
+                                    ) : (
+                                      ""
+                                    )} */}
                                   </li>
                                 ))}
                               </ul>
@@ -297,6 +300,37 @@ const Index = () => {
                       </ul>
                     </div>
                   </nav>
+                </div>
+              </div>
+              <div class="col d-none d-xl-block">
+                <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
+                  <ul>
+                    <li>
+                      <a href="#" class="dropdown-toggle">
+                        <span class="active-currency">English</span>
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#">Arabic</a>
+                        </li>
+                        <li>
+                          <a href="#">Bengali</a>
+                        </li>
+                        <li>
+                          <a href="#">Chinese</a>
+                        </li>
+                        <li>
+                          <a href="#">English</a>
+                        </li>
+                        <li>
+                          <a href="#">French</a>
+                        </li>
+                        <li>
+                          <a href="#">Hindi</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="col--- ltn__header-options ltn__header-options-2">

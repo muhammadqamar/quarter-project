@@ -9,6 +9,7 @@ import ClientsLogoSlider from "./clientsLogoSlider";
 import NewsBlog from "./newsBlogs";
 import CallToAction from "./CallToAction";
 import VideoPopup from "./VideoPopup";
+import FeaturedCommunities from "./featuredCommunities";
 
 const Index = () => {
   const settings = {
@@ -76,10 +77,7 @@ const Index = () => {
       <div className="ltn__slider-area ltn__slider-3  section-bg-2">
         <div className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
           <Slider {...settings}>
-            <div
-              className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60"
-              data-bs-bg="img/slider/11.jpg"
-            >
+            <div className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- bg-overlay-theme-black-60">
               <div className="ltn__slide-item-inner text-center">
                 <div className="container">
                   <div className="row">
@@ -106,12 +104,16 @@ const Index = () => {
                           </h1>
                           <div className="slide-brief animated">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                              eiusmod tempor incididunt ut labore.
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore.
                             </p>
                           </div>
                           <div className="btn-wrapper animated">
-                            <a href="shop.html" className="theme-btn-1 btn btn-effect-1">
+                            <a
+                              href="shop.html"
+                              className="theme-btn-1 btn btn-effect-1"
+                            >
                               Make An Enquiry
                             </a>
                           </div>
@@ -123,7 +125,7 @@ const Index = () => {
               </div>
             </div>
             {/* <!-- ltn__slide-item --> */}
-            <div
+            {/* <div
               className="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60"
               data-bs-bg="img/slider/12.jpg"
             >
@@ -144,12 +146,16 @@ const Index = () => {
                           </h1>
                           <div className="slide-brief animated">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                              eiusmod tempor incididunt ut labore.
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore.
                             </p>
                           </div>
                           <div className="btn-wrapper animated">
-                            <a href="shop.html" className="theme-btn-1 btn btn-effect-1">
+                            <a
+                              href="shop.html"
+                              className="theme-btn-1 btn btn-effect-1"
+                            >
                               Make An Enquiry
                             </a>
                           </div>
@@ -159,9 +165,9 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <!-- ltn__slide-item --> */}
-            <div
+            {/* <div
               className="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60"
               data-bs-bg="img/slider/13.jpg"
             >
@@ -182,12 +188,16 @@ const Index = () => {
                           </h1>
                           <div className="slide-brief animated">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                              eiusmod tempor incididunt ut labore.
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore.
                             </p>
                           </div>
                           <div className="btn-wrapper animated">
-                            <a href="shop.html" className="theme-btn-1 btn btn-effect-1">
+                            <a
+                              href="shop.html"
+                              className="theme-btn-1 btn btn-effect-1"
+                            >
                               Make An Enquiry
                             </a>
                           </div>
@@ -197,19 +207,23 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </Slider>
         </div>
       </div>
       {/* <!-- CAR DEALER FORM AREA START --> */}
-      <div className="ltn__car-dealer-form-area mt--65 mt-120 pb-115---">
+      <div className="ltn__car-dealer-form-area pb-115---">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="ltn__car-dealer-form-tab">
                 <div className="ltn__tab-menu  text-uppercase d-none">
                   <div className="nav">
-                    <a className="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1">
+                    <a
+                      className="active show"
+                      data-bs-toggle="tab"
+                      href="#ltn__form_tab_1_1"
+                    >
                       <i className="fas fa-car"></i>Find A Car
                     </a>
                     <a data-bs-toggle="tab" href="#ltn__form_tab_1_2" className>
@@ -218,7 +232,10 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="tab-content bg-white box-shadow-1 ltn__border position-relative pb-10">
-                  <div className="tab-pane fade active show" id="ltn__form_tab_1_1">
+                  <div
+                    className="tab-pane fade active show"
+                    id="ltn__form_tab_1_1"
+                  >
                     <div className="car-dealer-form-inner">
                       <form action="#" className="ltn__car-dealer-form-box row">
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
@@ -326,11 +343,12 @@ const Index = () => {
       </div>
       <OurMainFocus />
       <AreaProperties />
-      <FeaturedListings />
-      <VideoPopup />
+      {/* <FeaturedListings /> */}
+      {/* <NewsBlog /> */}
+      <FeaturedCommunities />
       <ClientsFeedback />
+      <VideoPopup />
       <ClientsLogoSlider />
-      <NewsBlog />
       <CallToAction />
     </>
   );
