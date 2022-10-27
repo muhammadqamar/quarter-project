@@ -57,7 +57,7 @@ const mobileMenuList = [
         taglink: "https://www.kakaako.com/condo/popular-condos/",
         taglist: "Popular Condos in 2022",
       },
-      { taglink: "", taglist: "Friend and Family Sale" },
+      { taglink: "javascript:void(0)", taglist: "Friend and Family Sale" },
     ],
   },
   {
@@ -68,10 +68,10 @@ const mobileMenuList = [
         taglink: "https://www.kakaako.com/buyers/mortgage-calculator/",
         taglist: "Mortgage Calculator",
       },
-      { taglink: "", taglist: "Mortgage Pre-Approval" },
-      { taglink: "", taglist: "Affordable Housing" },
-      { taglink: "", taglist: "First Time Buyers" },
-      { taglink: "", taglist: "Personalized Home Search" },
+      { taglink: "javascript:void(0)", taglist: "Mortgage Pre-Approval" },
+      { taglink: "javascript:void(0)", taglist: "Affordable Housing" },
+      { taglink: "javascript:void(0)", taglist: "First Time Buyers" },
+      { taglink: "javascript:void(0)", taglist: "Personalized Home Search" },
     ],
   },
   {
@@ -82,10 +82,10 @@ const mobileMenuList = [
         taglink: "https://www.kakaako.com/sellers/",
         taglist: " Selling A Home",
       },
-      { taglink: "", taglist: "Pricing Your Home" },
-      { taglink: "", taglist: "Flat Fee Listing" },
-      { taglink: "", taglist: "Virtual Staging" },
-      { taglink: "", taglist: "Free Market Analysis" },
+      { taglink: "javascript:void(0)", taglist: "Pricing Your Home" },
+      { taglink: "javascript:void(0)", taglist: "Flat Fee Listing" },
+      { taglink: "javascript:void(0)", taglist: "Virtual Staging" },
+      { taglink: "javascript:void(0)", taglist: "Free Market Analysis" },
     ],
   },
   {
@@ -107,11 +107,11 @@ const mobileMenuList = [
     list_link: "https://www.kakaako.com/contact/",
     dropDownList: [
       {
-        taglink: "",
+        taglink: "javascript:void(0)",
         taglist: "About",
       },
       {
-        taglink: "",
+        taglink: "javascript:void(0)",
         taglist: "Schedule a Showing",
       },
       {
@@ -129,7 +129,7 @@ const Index = () => {
   const [active, setActive] = useState(false);
 
   const ScrollDown = () => {
-    if (window.scrollY >= 130) {
+    if (window.scrollY >= 90) {
       setChColor(true);
     } else {
       setChColor(false);
@@ -250,7 +250,7 @@ const Index = () => {
               <div class="col-2">
                 <div class="site-logo-wrap">
                   <div class="site-logo">
-                    <a href="index.html">
+                    <a href="javascript:void(0)">
                       <img src="images/logo-2.png" alt="Logo" />
                     </a>
                   </div>
@@ -295,7 +295,7 @@ const Index = () => {
                           </>
                         ))}
                         <li class="special-link">
-                          <a href="add-listing.html">Add Listing</a>
+                          <a href="javascript:void(0)">Add Listing</a>
                         </li>
                       </ul>
                     </div>
@@ -306,7 +306,7 @@ const Index = () => {
                 <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
                   <ul>
                     <li>
-                      <a href="#" class="dropdown-toggle">
+                      <a href="javascript:void(0)" class="dropdown-toggle">
                         <span class="active-currency">English</span>
                       </a>
                       <ul>
