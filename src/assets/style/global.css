@@ -18215,3 +18215,69 @@ input.cart-plus-minus-box {
   transition: all 0.3s ease;
   width: 20px;
 }
+
+
+ /* Meetdetail css */
+.meet-section-image {
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  width: 100%;
+
+}
+.meet-section-image::after{
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  left: 15px;
+  bottom: -15px;
+  border: 1px solid #000;
+  z-index: -1;
+}
+
+/* LetGetStarted */
+.bg-cutome-img-lg-parent{
+  height: 675px;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+.bg-cutome-img-lg{
+  /* height: 675px; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 9;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+
+	transition: all .6s ease-in-out;
+
+}
+
+.bg-cutome-img-lg::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(185, 180, 180, 0.493) !important;
+  z-index: -99;
+  
+  }
+
+.bg-cutome-img-lg:hover{	
+
+	transform: scale(1.2);
+}
+
+
+
+

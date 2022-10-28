@@ -10,6 +10,8 @@ import NewsBlog from "./newsBlogs";
 import CallToAction from "./CallToAction";
 import VideoPopup from "./VideoPopup";
 import FeaturedCommunities from "./featuredCommunities";
+import MeetDetailSection from "./MeetDetailSection";
+import LetGetStarted from "./LetGetStarted";
 
 const Index = () => {
   const settings = {
@@ -341,14 +343,16 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <OurMainFocus />
-      <AreaProperties />
+      <MeetDetailSection/>
+      {/* <OurMainFocus /> */}
+      <LetGetStarted/>
+      {/* <AreaProperties /> */}
       {/* <FeaturedListings /> */}
       {/* <NewsBlog /> */}
       <FeaturedCommunities />
-      <ClientsFeedback />
+      {/* <ClientsFeedback /> */}
       <VideoPopup />
-      <ClientsLogoSlider />
+      {/* <ClientsLogoSlider /> */}
       <CallToAction />
     </>
   );
