@@ -31,7 +31,7 @@ const FeaturedCommunities = () => {
           style={{
             backgroundImage: `url(${item.logo})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "100% 100%",
+            backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >

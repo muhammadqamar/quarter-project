@@ -105,7 +105,7 @@ const Index = () => {
                             Find Your Dream <br /> House By Us
                           </h1>
                           <div className="slide-brief animated">
-                            <p>
+                            <p className="slide_para">
                               Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit, sed do eiusmod tempor incididunt
                               ut labore.
@@ -343,9 +343,9 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <MeetDetailSection/>
+      <MeetDetailSection />
       {/* <OurMainFocus /> */}
-      <LetGetStarted/>
+      <LetGetStarted />
       {/* <AreaProperties /> */}
       {/* <FeaturedListings /> */}
       {/* <NewsBlog /> */}
