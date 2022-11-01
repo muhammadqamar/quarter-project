@@ -64,6 +64,7 @@ font-family: 'Titillium Web', sans-serif;
 */
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300&family=Rufina:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@1,300&display=swap"); */
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 @font-face {
@@ -18063,8 +18064,15 @@ input.cart-plus-minus-box {
   font-weight: 500;
 }
 .started_heading {
+  color: #000;
   font-size: 34px;
   font-weight: 600;
+}
+.theme-btn-2 {
+  background-color: #000;
+}
+.theme-btn-2:hover {
+  background: transparent;
 }
 @media (max-width: 991px) {
   .col_house {
@@ -18093,6 +18101,9 @@ input.cart-plus-minus-box {
   font-weight: 300;
   line-height: 1.65;
   margin-bottom: 30px;
+}
+.started_para {
+  color: #000;
 }
 .feature_link_btn {
   position: relative;
