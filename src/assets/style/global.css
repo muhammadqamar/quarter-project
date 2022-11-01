@@ -459,7 +459,7 @@ a:focus,
 a:active {
   text-decoration: none !important;
   outline: none;
-  color: inherit !important;
+  color: inherit;
 }
 
 a:hover {
