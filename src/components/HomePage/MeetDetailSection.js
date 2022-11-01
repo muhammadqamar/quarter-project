@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import "./style/meetDetailSection.scss"
 
 const MeetDetailSection = () => {
@@ -29,7 +29,7 @@ const MeetDetailSection = () => {
               <div className="btn-wrapper  mt-0">
                 <a
                   href="shop-right-sidebar.html"
-                  className="btn theme-btn-1 btn-effect-1 text-uppercase"
+                  className="btn theme-btn-1 theme-btn-2 btn-effect-1 text-uppercase"
                 >
                   Learn More
                 </a>
