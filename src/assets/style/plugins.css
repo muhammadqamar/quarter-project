@@ -21,7 +21,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-*/ :root {
+:root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -43,12 +43,16 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
 }
 *,
 ::after,
@@ -1922,8 +1926,9 @@ progress {
   border-width: 0;
   border-inline-end-width: 1px;
   border-radius: 0;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2198,8 +2203,8 @@ textarea.form-control-lg {
   background-color: #0d6efd;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
   -webkit-appearance: none;
@@ -2229,8 +2234,8 @@ textarea.form-control-lg {
   background-color: #0d6efd;
   border: 0;
   border-radius: 1rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
@@ -2387,12 +2392,14 @@ textarea.form-control-lg {
   padding-right: 3rem;
 }
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
-.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group:not(.has-validation)
+  > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n + 4),
-.input-group.has-validation > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group.has-validation
+  > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -2445,7 +2452,8 @@ textarea.form-control-lg {
 .was-validated textarea.form-control:valid,
 textarea.form-control.is-valid {
   padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  background-position: top calc(0.375em + 0.1875rem) right
+    calc(0.375em + 0.1875rem);
 }
 .form-select.is-valid,
 .was-validated .form-select:valid {
@@ -2540,7 +2548,8 @@ textarea.form-control.is-valid {
 .was-validated textarea.form-control:invalid,
 textarea.form-control.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  background-position: top calc(0.375em + 0.1875rem) right
+    calc(0.375em + 0.1875rem);
 }
 .form-select.is-invalid,
 .was-validated .form-select:invalid {
@@ -4212,7 +4221,8 @@ fieldset:disabled .btn {
   border-radius: 0;
   overflow-anchor: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    border-radius 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -11137,27 +11147,32 @@ fieldset:disabled .btn {
 @-webkit-keyframes flip {
   0% {
     -webkit-animation-timing-function: ease-out;
-    -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(0)
+      rotateY(-1turn);
     animation-timing-function: ease-out;
     transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
   }
   40% {
     -webkit-animation-timing-function: ease-out;
-    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px)
+      rotateY(-190deg);
     animation-timing-function: ease-out;
     transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
   }
   50% {
     -webkit-animation-timing-function: ease-in;
-    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px)
+      rotateY(-170deg);
     animation-timing-function: ease-in;
     transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
   }
   80% {
     -webkit-animation-timing-function: ease-in;
-    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95)
+      translateZ(0) rotateY(0deg);
     animation-timing-function: ease-in;
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0)
+      rotateY(0deg);
   }
   to {
     -webkit-animation-timing-function: ease-in;
@@ -11169,27 +11184,32 @@ fieldset:disabled .btn {
 @keyframes flip {
   0% {
     -webkit-animation-timing-function: ease-out;
-    -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(0)
+      rotateY(-1turn);
     animation-timing-function: ease-out;
     transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
   }
   40% {
     -webkit-animation-timing-function: ease-out;
-    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px)
+      rotateY(-190deg);
     animation-timing-function: ease-out;
     transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
   }
   50% {
     -webkit-animation-timing-function: ease-in;
-    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px)
+      rotateY(-170deg);
     animation-timing-function: ease-in;
     transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
   }
   80% {
     -webkit-animation-timing-function: ease-in;
-    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95)
+      translateZ(0) rotateY(0deg);
     animation-timing-function: ease-in;
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0)
+      rotateY(0deg);
   }
   to {
     -webkit-animation-timing-function: ease-in;
@@ -12609,7 +12629,8 @@ fieldset:disabled .btn {
   font-family: lightcase;
   src: url(/fonts/lightcase.eot);
   src: url(/fonts/lightcase.eot#iefix) format("embedded-opentype"),
-    url(/fonts/lightcase.woff) format("woff"), url(/fonts/lightcase.ttf) format("truetype"),
+    url(/fonts/lightcase.woff) format("woff"),
+    url(/fonts/lightcase.ttf) format("truetype"),
     url(/fonts/lightcase.svg#lightcase) format("svg");
   font-weight: 400;
   font-style: normal;
@@ -12806,9 +12827,18 @@ html[data-lc-type="inline"] #lightcase-content .lightcase-contentInner {
     width: 100% !important;
     max-width: none !important;
   }
-  html[data-lc-type="ajax"] #lightcase-content .lightcase-contentInner > :not(iframe),
-  html[data-lc-type="error"] #lightcase-content .lightcase-contentInner > :not(iframe),
-  html[data-lc-type="inline"] #lightcase-content .lightcase-contentInner > :not(iframe) {
+  html[data-lc-type="ajax"]
+    #lightcase-content
+    .lightcase-contentInner
+    > :not(iframe),
+  html[data-lc-type="error"]
+    #lightcase-content
+    .lightcase-contentInner
+    > :not(iframe),
+  html[data-lc-type="inline"]
+    #lightcase-content
+    .lightcase-contentInner
+    > :not(iframe) {
     height: auto !important;
     max-height: none !important;
   }
@@ -12831,9 +12861,18 @@ html[data-lc-type="image"] #lightcase-content .lightcase-contentInner {
   overflow: hidden !important;
 }
 @media screen and (max-width: 640px) {
-  html[data-lc-type="ajax"] #lightcase-content .lightcase-contentInner .lightcase-inlineWrap,
-  html[data-lc-type="error"] #lightcase-content .lightcase-contentInner .lightcase-inlineWrap,
-  html[data-lc-type="inline"] #lightcase-content .lightcase-contentInner .lightcase-inlineWrap {
+  html[data-lc-type="ajax"]
+    #lightcase-content
+    .lightcase-contentInner
+    .lightcase-inlineWrap,
+  html[data-lc-type="error"]
+    #lightcase-content
+    .lightcase-contentInner
+    .lightcase-inlineWrap,
+  html[data-lc-type="inline"]
+    #lightcase-content
+    .lightcase-contentInner
+    .lightcase-inlineWrap {
     position: relative !important;
     top: auto !important;
     left: auto !important;
@@ -13180,7 +13219,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
   -webkit-transform: scale(0.75) translateY(-21px);
   -ms-transform: scale(0.75) translateY(-21px);
   transform: scale(0.75) translateY(-21px);
-  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25),
+    opacity 0.15s ease-out;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   z-index: 9;
 }
@@ -13369,7 +13409,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
 }
 .ui-widget-content {
   border: 1px solid #a6c9e2;
-  background: #fcfdfd url("/images/ui-bg_inset-hard_100_fcfdfd_1x100.png") 50% bottom repeat-x;
+  background: #fcfdfd url("/images/ui-bg_inset-hard_100_fcfdfd_1x100.png") 50%
+    bottom repeat-x;
   color: #222;
 }
 .ui-widget-content a {
@@ -13377,7 +13418,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
 }
 .ui-widget-header {
   border: 1px solid #4297d7;
-  background: #5c9ccc url("/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") 50% 50% repeat-x;
+  background: #5c9ccc url("/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") 50%
+    50% repeat-x;
   color: #fff;
   font-weight: bold;
 }
@@ -13388,7 +13430,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
   border: 1px solid #c5dbec;
-  background: #dfeffc url("/images/ui-bg_glass_85_dfeffc_1x400.png") 50% 50% repeat-x;
+  background: #dfeffc url("/images/ui-bg_glass_85_dfeffc_1x400.png") 50% 50%
+    repeat-x;
   font-weight: bold;
   color: #2e6e9e;
 }
@@ -13405,7 +13448,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
   border: 1px solid #79b7e7;
-  background: #d0e5f5 url("/images/ui-bg_glass_75_d0e5f5_1x400.png") 50% 50% repeat-x;
+  background: #d0e5f5 url("/images/ui-bg_glass_75_d0e5f5_1x400.png") 50% 50%
+    repeat-x;
   font-weight: bold;
   color: #1d5987;
 }
@@ -13424,7 +13468,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
   border: 1px solid #79b7e7;
-  background: #f5f8f9 url("/images/ui-bg_inset-hard_100_f5f8f9_1x100.png") 50% 50% repeat-x;
+  background: #f5f8f9 url("/images/ui-bg_inset-hard_100_f5f8f9_1x100.png") 50%
+    50% repeat-x;
   font-weight: bold;
   color: #e17009;
 }
@@ -13450,7 +13495,8 @@ a[class*="lightcase-icon-"].lightcase-icon-play {
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
   border: 1px solid #cd0a0a;
-  background: #fef1ec url("/images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
+  background: #fef1ec url("/images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50%
+    repeat-x;
   color: #cd0a0a;
 }
 .ui-state-error a,
