@@ -17927,7 +17927,7 @@ input.cart-plus-minus-box {
   color: var(--white);
 }
 .theme-btn-2:hover {
-  background-color: var(--ltn__secondary-color);
+  background-color: transparent !important;
   color: var(--ltn__primary-color);
 }
 
