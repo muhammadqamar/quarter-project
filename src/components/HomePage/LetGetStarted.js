@@ -59,7 +59,7 @@ const LetGetStarted = () => {
                     <p className="right_para started_para">{data.para}</p>
                     <a
                       href="javascript:void(0)"
-                      className="btn theme-btn-1 theme-btn-2 btn-effect-1 text-uppercase"
+                      className="btn theme-btn-1 theme-btn-2 theme-btn-2 btn-effect-1 text-uppercase"
                     >
                       <span className="inner_link">Learn More</span>
                     </a>
@@ -99,7 +99,7 @@ const LetGetStarted = () => {
                       <p className="right_para">{item.para}</p>
                       <a
                         href="javascript:void(0)"
-                        className="btn theme-btn-1 theme-btn-2 btn-effect-1 text-uppercase"
+                        className="btn theme-btn-1 theme-btn-2 theme-btn-2 btn-effect-1 text-uppercase"
                       >
                         <span className="inner_link">Learn More</span>
                       </a>
