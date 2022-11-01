@@ -463,7 +463,7 @@ a:active {
 }
 
 a:hover {
-  color: var(--ltn__secondary-color) !important;
+  color: var(--ltn__secondary-color);
 }
 
 button,
@@ -17923,12 +17923,12 @@ input.cart-plus-minus-box {
 }
 
 .theme-btn-2 {
-  background-color: var(--ltn__primary-color);
+  background-color: var(--ltn__primary-color) !important;
   color: var(--white);
 }
 .theme-btn-2:hover {
   background-color: var(--ltn__secondary-color);
-  color: var(--white);
+  color: var(--ltn__primary-color);
 }
 
 .theme-btn-3 {
