@@ -435,7 +435,8 @@ h6,
 }
 
 p {
-  color: var(--ltn__paragraph-color);
+  /* color: var(--ltn__paragraph-color); */
+  color: var(--ltn__primary-color);
   margin-bottom: 1.5em;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
