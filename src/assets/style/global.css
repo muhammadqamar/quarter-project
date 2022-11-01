@@ -408,7 +408,7 @@ font-family: 'Titillium Web', sans-serif;
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: var(--ltn__body-font);
+  /* font-family: var(--ltn__body-font); */
 }
 
 * {
@@ -7762,13 +7762,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   line-height: 1;
   margin-bottom: 20px;
   font-weight: 500;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 .ltn__slide-item-2 .slide-title span {
   color: var(--ltn__secondary-color);
 }
 .slide_para {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 .ltn__slide-item-2 .btn-wrapper {
   margin-top: 40px;
@@ -18099,7 +18099,7 @@ input.cart-plus-minus-box {
   background: #000;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 500;
