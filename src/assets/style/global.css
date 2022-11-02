@@ -445,7 +445,7 @@ p {
 }
 
 a {
-  color: inherit;
+  color: inherit !important;
   text-decoration: none !important;
   color: var(--ltn__paragraph-color);
   -webkit-transition: all 0.3s ease 0s;
@@ -464,7 +464,7 @@ a:active {
 }
 
 a:hover {
-  color: var(--ltn__secondary-color);
+  color: var(--ltn__secondary-color) !important;
 }
 
 button,
