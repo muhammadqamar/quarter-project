@@ -18204,7 +18204,7 @@ input.cart-plus-minus-box {
 .feature_link_btn {
   position: relative;
   background: #000;
-  color: #fff;
+  color: var(--white) !important;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -18222,7 +18222,7 @@ input.cart-plus-minus-box {
 }
 .feature_link_btn:hover {
   background: #fff;
-  color: #000;
+  color: var(--ltn__primary-color) !important;
 }
 .feature_link_btn:hover::after {
   left: calc(100% - 27px);
