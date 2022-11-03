@@ -1,7 +1,7 @@
 import React from "react";
 // import "./style/meetDetailSection.scss"
 
-const MeetDetailSection = () => {
+const MeetDetailSection = ({data}) => {
   return (
     <section className="ltn__feature-area  section-bg-1--- pt-115 pb-90 mb-120---">
       <div className="container">
@@ -13,18 +13,23 @@ const MeetDetailSection = () => {
           </div>
           <div className="col-lg-6 col-12">
             <div className="ltn__feature-info pt-115">
-              <h2 className="section-title text-center">Meet Holden Lau</h2>
+              <h2 className="section-title text-center">
+                {/* Meet Holden Lau */}
+                {data?.meetHeading}
+                </h2>
               <p>
-                Holden Lau represents the region s finest properties with
+                {data?.meetAbout?.slice(0,135)}
+                {/* Holden Lau represents the region s finest properties with
                 exceptional skill using the most innovative technologies
-                currently available.
+                currently available. */}
               </p>
 
               <p>
-                Holden Lau offers ultimate privacy and security, speed, and
+              {data?.meetAbout?.slice(135)}
+                {/* Holden Lau offers ultimate privacy and security, speed, and
                 efficiency. Their years of full-time experience have given them
                 a clear understanding of the mindset of home buyers and sellers
-                and a thorough understanding of the regional marketplace.
+                and a thorough understanding of the regional marketplace. */}
               </p>
               <div className="btn-wrapper  mt-0">
                 <a

@@ -21,10 +21,10 @@ const featureLogo = [
   },
 ];
 
-const FeaturedCommunities = () => {
+const FeaturedCommunities = ({data}) => {
   return (
     <div className="main_feature">
-      {featureLogo.map((item, index) => (
+      {data?.midReportSectionCards?.map((item, index) => (
         <div
           key={index}
           className="featured_logo"
