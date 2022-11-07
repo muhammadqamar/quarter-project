@@ -8,7 +8,8 @@ const MeetDetailSection = ({data}) => {
         <div className="row ltn__custom-gutter---  justify-content-center">
           <div className="col-lg-6 col-12">
             <div className="meet-section-image">
-              <img src="images/about-photo.jpg" />
+              {/* <img src="images/about-photo.jpg" /> */}
+              <img src={data?.meetImage?.fields?.file?.url}/>
             </div>
           </div>
           <div className="col-lg-6 col-12">

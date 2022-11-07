@@ -24,12 +24,12 @@ const featureLogo = [
 const FeaturedCommunities = ({data}) => {
   return (
     <div className="main_feature">
-      {data?.midReportSectionCards?.map((item, index) => (
+      {data?.reportSectionCard?.map((item, index) => (
         <div
           key={index}
           className="featured_logo"
           style={{
-            backgroundImage: `url(${item.logo})`,
+            backgroundImage: `url(${item?.fields?.cardImg?.fields?.file.url})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -41,10 +41,10 @@ const FeaturedCommunities = ({data}) => {
               marginLeft: (index === 1 && "0") || "50%",
             }}
           >
-            <h3 className="right_heading">{item.heading}</h3>
-            <p className="right_para">{item.para}</p>
+            <h3 className="right_heading">{item?.fields?.cardTitle}</h3>
+            <p className="right_para">{item?.fields?.cardDec}</p>
             <a href="javascript:void(0)" className="feature_link_btn">
-              <span className="inner_link">{item.btn}</span>
+              <span className="inner_link">{item?.fields?.cardBtnTxt}</span>
             </a>
           </div>
         </div>

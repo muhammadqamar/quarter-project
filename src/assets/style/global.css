@@ -7597,7 +7597,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding-bottom: 100px;
   height: 750px;
   background: url(/images/5.jpg) center no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 100% ;
 }
 
 .ltn__slide-item-inner {
