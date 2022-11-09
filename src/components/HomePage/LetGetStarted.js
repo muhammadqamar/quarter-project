@@ -48,7 +48,7 @@ const LetGetStarted = ({title,data}) => {
         </div>
         {/* List */}
         <div className="row">
-          {data?.startSectionCardsDetail?.map((_data, index) => {
+          {data?.startedSectionCardsDetail?.map((_data, index) => {
             return (
               <div
                 key={index}
@@ -90,7 +90,7 @@ const LetGetStarted = ({title,data}) => {
           </div>
           {/* List */}
           <div className="row">
-            {data?.featuredCommunitiesCard?.map((_data, index) => {
+            {data?.featuredCommunitieCard?.map((_data, index) => {
               return (
                 <div
                   key={index}

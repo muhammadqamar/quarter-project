@@ -24,7 +24,7 @@ export async function fetchEntries({ pageContentType, locale, limit }, query) {
 
 export async function fetchHome(locale) {
   const entries = await fetchEntries({
-    contentType: "meet",
+    contentType: "home",
     locale,
   });
 
