@@ -224,7 +224,7 @@
   --ltn__heading-color: #071c1f;
   --ltn__paragraph-color: #5c727d;
   /* --ltn__heading-font: "Poppins", sans-serif;
-  --ltn__body-font: "Nunito Sans", sans-serif; */
+  --ltn__body-font: "Nunito Sans", sans-serif; */ 
   /* Footer ACD2D8 8CB2B2  */
   --ltn__color-1: #8cb2b2;
   --ltn__color-2: #acd2d8;
@@ -7597,7 +7597,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding-bottom: 100px;
   height: 750px;
   background: url(/images/5.jpg) center no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 100% ;
 }
 
 .ltn__slide-item-inner {

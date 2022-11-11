@@ -1,6 +1,6 @@
 import React from "react";
 
-const CallToAction = () => {
+const CallToAction = ({data}) => {
   return (
     <div
       class="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
@@ -11,12 +11,19 @@ const CallToAction = () => {
           <div class="col-lg-12">
             <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
               <div class="coll-to-info text-color-white">
-                <h1>Looking for a dream home?</h1>
-                <p>We can help you realize your dream of a new home</p>
+                <h1>
+                  {/* Looking for a dream home? */}
+                  {data?.footerDreamSectionTitle}
+                  </h1>
+                <p>
+                  {/* We can help you realize your dream of a new home */}
+                  {data?.footerDreamSectionDes}
+                  
+                  </p>
               </div>
               <div class="btn-wrapper">
                 <a class="btn btn-effect-3 btn-white" href="contact.html">
-                  Explore Properties <i class="icon-next"></i>
+                  {data?.footerDreamSectionBtnTxt} <i class="icon-next"></i>
                 </a>
               </div>
             </div>

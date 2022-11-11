@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ useState }from "react";
 import Slider from "react-slick";
 
 import OurMainFocus from "./ourMainFocus";
@@ -13,7 +13,11 @@ import FeaturedCommunities from "./featuredCommunities";
 import MeetDetailSection from "./MeetDetailSection";
 import LetGetStarted from "./LetGetStarted";
 
-const Index = () => {
+
+const Index = ({data}) => {
+  
+
+  
   const settings = {
     dots: false /* slider left or right side pagination count with line */,
     arrows: true /* slider arrow  */,
@@ -74,12 +78,20 @@ const Index = () => {
       },
     ],
   };
+  
   return (
     <>
       <div className="ltn__slider-area ltn__slider-3  section-bg-2">
         <div className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
           <Slider {...settings}>
-            <div className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- bg-overlay-theme-black-60">
+            <div className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- bg-overlay-theme-black-60" 
+            // style={{
+            //    backgroundImage: `url(${data?.heroBgImg?.fields?.file.url})`,
+            //    backgroundRepeat: "no-repeat",
+            //    backgroundPosition: "center",
+            // }}
+            
+            >
               <div className="ltn__slide-item-inner text-center">
                 <div className="container">
                   <div className="row">
@@ -102,13 +114,17 @@ const Index = () => {
                             Real Estate Agency
                           </h6>
                           <h1 className="slide-title animated ">
-                            Find Your Dream <br /> House By Us
+                            {/* Find Your Dream <br /> House By Us */}
+                            {data?.heroTitle?.slice(0,15)}
+                            <br/>
+                            {data?.heroTitle?.slice(15)}
                           </h1>
                           <div className="slide-brief animated">
                             <p className="slide_para">
-                              Lorem ipsum dolor sit amet, consectetur
+                              {/* Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit, sed do eiusmod tempor incididunt
-                              ut labore.
+                              ut labore. */}
+                              {data?.heroDescription}
                             </p>
                           </div>
                           <div className="btn-wrapper animated">
@@ -116,7 +132,8 @@ const Index = () => {
                               href="shop.html"
                               className="theme-btn-1 btn btn-effect-1"
                             >
-                              Make An Enquiry
+                              {data?.heroBtnTxt}
+                              {/* Make An Enquiry */}
                             </a>
                           </div>
                         </div>
@@ -242,30 +259,46 @@ const Index = () => {
                       <form action="#" className="ltn__car-dealer-form-box row">
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
                           <select className="nice-select">
-                            <option>Choose Area</option>
+                          <option>Choose Area</option>
+                            {data?.heroChooseArea?.map((_option,index)=>{
+                              return(
+                                <option key={index}>{_option}</option>
+                              )
+                            })}
+                            {/* <option>Choose Area</option>
                             <option>chicago</option>
                             <option>London</option>
                             <option>Los Angeles</option>
                             <option>New York</option>
-                            <option>New Jersey</option>
+                            <option>New Jersey</option> */}
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
                           <select className="nice-select">
-                            <option>Property Status</option>
+                          {data?.heroPropertyStatus?.map((_option,index)=>{
+                              return(
+                                <option key={index}>{_option}</option>
+                              )
+                            })}
+                            {/* <option>Property Status</option>
                             <option>Open house</option>
                             <option>Rent</option>
                             <option>Sale</option>
-                            <option>Sold</option>
+                            <option>Sold</option> */}
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-3 col-md-6">
                           <select className="nice-select">
-                            <option>Property Type</option>
+                          {data?.heroPropertyType?.map((_option,index)=>{
+                              return(
+                                <option key={index}>{_option}</option>
+                              )
+                            })}
+                            {/* <option>Property Type</option>
                             <option>Apartment</option>
                             <option>Co-op</option>
                             <option>Condo</option>
-                            <option>Single Family Home</option>
+                            <option>Single Family Home</option> */}
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
@@ -292,30 +325,45 @@ const Index = () => {
                       <form action="#" className="ltn__car-dealer-form-box row">
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
                           <select className="nice-select">
-                            <option>Choose Area</option>
+                          {data?.heroChooseArea?.map((_option,index)=>{
+                              return(
+                                <option key={index}>{_option}</option>
+                              )
+                            })}
+                            {/* <option>Choose Area</option>
                             <option>chicago</option>
                             <option>London</option>
                             <option>Los Angeles</option>
                             <option>New York</option>
-                            <option>New Jersey</option>
+                            <option>New Jersey</option> */}
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
                           <select className="nice-select">
-                            <option>Property Status</option>
+                          {data?.heroPropertyStatus?.map((_option,index)=>{
+                              return(
+                                <option key={index}>{_option}</option>
+                              )
+                            })}
+                            {/* <option>Property Status</option>
                             <option>Open house</option>
                             <option>Rent</option>
                             <option>Sale</option>
-                            <option>Sold</option>
+                            <option>Sold</option> */}
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-3 col-md-6">
                           <select className="nice-select">
-                            <option>Property Type</option>
+                          {data?.heroPropertyType?.map((_option,index)=>{
+                              return(
+                                <option key={index}>{_option}</option>
+                              )
+                            })}
+                            {/* <option>Property Type</option>
                             <option>Apartment</option>
                             <option>Co-op</option>
                             <option>Condo</option>
-                            <option>Single Family Home</option>
+                            <option>Single Family Home</option> */}
                           </select>
                         </div>
                         <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
@@ -343,17 +391,17 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <MeetDetailSection />
+      <MeetDetailSection data={data} />
       {/* <OurMainFocus /> */}
-      <LetGetStarted />
+      <LetGetStarted data={data}/>
       {/* <AreaProperties /> */}
       {/* <FeaturedListings /> */}
       {/* <NewsBlog /> */}
-      <FeaturedCommunities />
+      <FeaturedCommunities data={data}/>
       {/* <ClientsFeedback /> */}
       <VideoPopup />
       {/* <ClientsLogoSlider /> */}
-      <CallToAction />
+      <CallToAction data={data} />
     </>
   );
 };
