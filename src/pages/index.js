@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 
 export default function Home(homePage) {
   console.log(homePage);
-  const[homeData,setHomeData]=useState([])
-  useEffect(()=>{
-    setHomeData(homePage.homePage)
-  },[homePage])
+  const [homeData, setHomeData] = useState([]);
+  useEffect(() => {
+    setHomeData(homePage.homePage);
+  }, [homePage]);
   return (
     <Layout>
       <HomePage data={homeData[1]}/>
