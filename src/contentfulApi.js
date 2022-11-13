@@ -22,9 +22,9 @@ export async function fetchEntries({ pageContentType, locale, limit }, query) {
   }
 }
 
-export async function fetchHome(locale) {
+export async function fetchHome(locale,contentType) {
   const entries = await fetchEntries({
-    contentType: "home",
+    contentType: contentType,
     locale,
   });
 

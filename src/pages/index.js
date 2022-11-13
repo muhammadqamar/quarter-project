@@ -12,13 +12,13 @@ export default function Home(homePage) {
   },[homePage])
   return (
     <Layout>
-      <HomePage data={homeData[0]}/>
+      <HomePage data={homeData[1]}/>
     </Layout>
   );
 }
 
 export async function getStaticProps(context) {
-  const homePage = await fetchHome(context.locale);
+  const homePage = await fetchHome(context.locale,"home");
 
   return {
     props: {
