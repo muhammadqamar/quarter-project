@@ -224,7 +224,7 @@
   --ltn__heading-color: #071c1f;
   --ltn__paragraph-color: #5c727d;
   /* --ltn__heading-font: "Poppins", sans-serif;
-  --ltn__body-font: "Nunito Sans", sans-serif; */ 
+  --ltn__body-font: "Nunito Sans", sans-serif; */
   /* Footer ACD2D8 8CB2B2  */
   --ltn__color-1: #8cb2b2;
   --ltn__color-2: #acd2d8;
@@ -7597,7 +7597,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding-bottom: 100px;
   height: 750px;
   background: url(/images/5.jpg) center no-repeat;
-  background-size: 100% 100% ;
+  background-size: 100% 100%;
 }
 
 .ltn__slide-item-inner {
@@ -18307,7 +18307,7 @@ input.cart-plus-minus-box {
 
 .main_content {
   width: 100%;
-  padding: 90px 0 0;
+  padding: 147px 0 0;
 }
 
 /* Left Col Styling */
@@ -18433,13 +18433,13 @@ input.cart-plus-minus-box {
   font-family: "Montserrat", Verdana, sans-serif;
   font-weight: normal;
   font-size: 17px;
-  margin: 14px 0 2px;
+  margin: 14px 0 2px !important;
 }
 .linked_logo {
-  width: 32px;
+  width: 32px !important;
   height: 100%;
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 10px 0 !important;
 }
 .link_effect {
   display: block;
@@ -18450,6 +18450,7 @@ input.cart-plus-minus-box {
   font-size: 17px;
   padding: 13px 15px 15px;
   text-align: center;
+  margin: 0 !important;
 }
 .box_content {
   padding: 0;
@@ -18458,37 +18459,42 @@ input.cart-plus-minus-box {
   flex-wrap: wrap;
 }
 .box_list {
+  display: block !important;
   border-bottom: 1px solid #dedede;
   font-size: 14px;
   line-height: 45px;
   width: 164px;
   list-style: none;
   margin: 0 0 -1px;
-  overflow: hidden;
   padding: 0 10px;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
-.box_list_link {
-  color: #363636;
+.box_list::before {
+  content: "" !important;
 }
-/* .box_list_link::before{
+.box_list_link {
+  position: relative;
+  color: #363636;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box_list_link::before {
   backface-visibility: hidden;
   background: #363636;
-  bottom: 34px;
+  bottom: 0;
   content: "";
   height: 1px;
-  left: 31px;
+  left: 0;
   position: absolute;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   width: 0;
-} */
+}
 .box_list_link:hover {
   color: #363636 !important;
 }
-/* .box_list_link:hover::before{
+.box_list_link:hover::before {
   width: 100%;
-} */
+}
 .check_title {
   padding: 13px 0px 15px;
   text-align: left;
@@ -18498,18 +18504,19 @@ input.cart-plus-minus-box {
   align-items: flex-start;
 }
 .checkImg {
-  width: 22px;
-  height: 20px;
+  width: 22px !important;
+  height: 20px !important;
+  margin: 0 !important;
 }
 .check_list {
   font-size: 15px;
-  margin: 0;
+  margin: 0 !important;
 }
 .check_btn_bx {
   text-align: center;
 }
 .check_btn {
-  background: #1d2a38;
+  background: #273748;
   border: none;
   border-radius: 0;
   display: inline-block;
@@ -18521,18 +18528,87 @@ input.cart-plus-minus-box {
   transition: 0.3s ease;
   margin: 15px 0 0;
   color: #fff;
-  /* vertical-align: middle; */
+}
+.check_btn:hover {
+  background: #1d2a38;
+}
+.check_btn:hover::after {
+  left: calc(100% - 26px);
+  opacity: 1;
 }
 .check_btn::after {
-  content: "\f061";
-  font-size: 14px;
-  height: 20px;
+  content: "";
+  background-image: url(/images/right-arrow1.svg);
+  background-position: center;
+  background-size: cover;
+  height: 14px;
   left: calc(100% - 45px);
   line-height: 20px;
   margin-top: -10px;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 57%;
   transition: all 0.3s ease;
-  width: 20px;
+  width: 14px;
+}
+
+/* detail-condo Contentful Styling */
+
+@media (max-width: 992px) {
+  .condo_content_detail .content_row {
+    flex-direction: column;
+  }
+}
+.condo_content_detail h1,
+h2 {
+  color: #363636;
+  font-weight: 300;
+  font-family: "Roboto", "Lato", "Open Sans", Helvetica, sans-serif;
+}
+.condo_content_detail h1 {
+  font-size: 38px;
+  margin: 0 0 30px;
+}
+.condo_content_detail p {
+  color: #363636;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 30px;
+}
+.condo_content_detail p a {
+  color: #ba8245 !important;
+}
+.condo_content_detail p a:hover {
+  color: #94b0bb !important;
+  text-decoration: underline !important;
+}
+.condo_content_detail img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+.condo_content_detail ul {
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 0;
+}
+.condo_content_detail ul li {
+  color: #363636;
+  margin: 0 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+}
+.condo_content_detail ul li p {
+  margin: 0;
+}
+.condo_content_detail ul li::before {
+  content: "\2022";
+  color: rgb(186, 130, 69);
+  font-size: 1.5em;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  width: 1em;
 }

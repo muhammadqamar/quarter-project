@@ -127,7 +127,7 @@ const wardRightVillage2 = [
     title: "Midtown Ala Moana Condos",
     Downward: [
       {
-        wardList: "The Park on Keeaum...",
+        wardList: "The Park on Keeaum",
       },
       {
         wardList: "Sky Ala Moana",
@@ -142,7 +142,7 @@ const wardRightVillage2 = [
         wardList: "Mandarin Oriental",
       },
       {
-        wardList: "Kapiolani Reside...",
+        wardList: "Kapiolani Reside",
       },
     ],
   },
@@ -152,7 +152,7 @@ const wardRightVillage3 = [
     title: "New Honolulu Condos",
     Downward: [
       {
-        wardList: "The Park on Keeaum...",
+        wardList: "The Park on Keeaum",
       },
       {
         wardList: "Ko'ula",
@@ -176,10 +176,10 @@ const wardRightVillage3 = [
         wardList: "Sky Ala Moana",
       },
       {
-        wardList: "Kahuina Condo in...",
+        wardList: "Kahuina Condo in",
       },
       {
-        wardList: "The Collection H...",
+        wardList: "The Collection H",
       },
     ],
   },
@@ -327,6 +327,20 @@ const Index = () => {
               Kalae there will be 4, which will be a perfect place for small or
               large gatherings with friends and family.
             </p>
+            {groundAmenities.map((item, index) => (
+              <>
+                <p key={index} className="inner_subheading">
+                  {item.SubHeading}
+                </p>
+                <ul className="inner_unordered">
+                  {item.DownList.map((item, index) => (
+                    <li key={index} className="inner_list">
+                      {item.innerList}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ))}
           </div>
           <div className="col-md-4 right_col">
             <div className="right_box">
@@ -399,24 +413,6 @@ const Index = () => {
               ))}
             </div>
             <div className="right_box link_effect">
-              {wardRightVillage3.map((item, index) => (
-                <>
-                  <p key={index} className="title">
-                    {item.title}
-                  </p>
-                  <ul className="box_content">
-                    {item.Downward.map((item, index) => (
-                      <li key={index} className="box_list">
-                        <a href="" className="box_list_link">
-                          {item.wardList}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ))}
-            </div>
-            <div className="right_box link_effect">
               {checkMark.map((item, index) => (
                 <>
                   <p key={index} className="title check_title">
@@ -439,6 +435,12 @@ const Index = () => {
                   </div>
                 </>
               ))}
+            </div>
+            <div className="right_box link_effect">
+              <p className="title">Mortgage Calculator</p>
+              <div className="check_btn_bx">
+                <button className="check_btn">calculate your mortage!</button>
+              </div>
             </div>
           </div>
         </div>

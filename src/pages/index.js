@@ -5,20 +5,20 @@ import { fetchHome } from "../contentfulApi";
 import { useEffect, useState } from "react";
 
 export default function Home(homePage) {
-  console.log(homePage);
+  console.log("home page data is here", homePage);
   const [homeData, setHomeData] = useState([]);
   useEffect(() => {
     setHomeData(homePage.homePage);
   }, [homePage]);
   return (
     <Layout>
-      <HomePage data={homeData[1]}/>
+      <HomePage data={homeData[1]} />
     </Layout>
   );
 }
 
 export async function getStaticProps(context) {
-  const homePage = await fetchHome(context.locale,"home");
+  const homePage = await fetchHome(context.locale, "home");
 
   return {
     props: {

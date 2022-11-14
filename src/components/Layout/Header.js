@@ -25,11 +25,11 @@ const mobileMenuList = [
     list_link: "javascript:void(0)",
     dropDownList: [
       {
-        taglink: "../condoDetails",
+        taglink: "/condoDetails",
         taglist: "Kalae",
       },
       {
-        taglink: "https://www.kakaako.com/condo/koula/",
+        taglink: "/detail-condo",
         taglist: "Ko'ula",
       },
       {
@@ -123,7 +123,7 @@ const mobileMenuList = [
   },
 ];
 
-const Index = () => {
+const Index = ({ headerBg }) => {
   const [chColor, setChColor] = useState(false);
   const [show, setShow] = useState(false);
   const [active, setActive] = useState(false);
@@ -144,7 +144,10 @@ const Index = () => {
 
   return (
     <>
-      <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---">
+      <header
+        style={{ background: headerBg }}
+        class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---"
+      >
         {/*  ltn__header-middle-area start */}
         <div
           class={`${

@@ -1,14 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout";
-import DetailContentCondo from "../components/detailContentCondo";
-import { fetchHome } from "../contentfulApi";
-import { GetStaticPropsContext } from "next";
+import { fetchHome } from "../../contentfulApi";
+import Layout from "../../components/Layout";
+import DetailContentCondo from "../../components/detailContentCondo";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
-import Detail from "./condo/[detail]";
 
-const DetailCondo = (detailPage) => {
+export default function Detail({ condo }) {
   const [pageDetail, setPageDetail] = useState("");
   const sectionRendererOptions = {
     renderNode: {
@@ -21,9 +18,9 @@ const DetailCondo = (detailPage) => {
   };
 
   useEffect(() => {
-    setPageDetail(detailPage?.detailPage[0]);
-  }, []);
-  console.log("detailPage", detailPage);
+    setPageDetail(condo?.[0]);
+  }, [condo]);
+
   return (
     <Layout headerBg={"#071c1f"}>
       <div className="main_content">
@@ -42,15 +39,38 @@ const DetailCondo = (detailPage) => {
       </div>
     </Layout>
   );
-};
+}
 
-export default DetailCondo;
-
-export async function getStaticProps(context) {
+// Generates `/posts/1` and `/posts/2`
+export async function getStaticPaths(context) {
   const detailPage = await fetchHome(context.locale, "detailCondo");
+  console.log(detailPage);
+  const paths = detailPage.filter((condo) => {
+    if (condo.pageUrl) {
+      return { params: { detail: condo.pageUrl } };
+    }
+  });
+
+  // { fallback: false } means other routes should 404
   return {
+    paths: [{ params: { detail: "1" } }, { params: { detail: "2" } }],
+    fallback: true,
+  };
+}
+
+// `getStaticPaths` requires using `getStaticProps`
+export async function getStaticProps({ params, locale }) {
+  console.log("context", params);
+  const detailPage = await fetchHome(locale, "detailCondo");
+  return {
+    // Passed to the page component as props
     props: {
       detailPage,
+      condo: detailPage.filter((condo) => {
+        if (condo.pageUrl === params.detail) {
+          return condo;
+        }
+      }),
     },
   };
 }
