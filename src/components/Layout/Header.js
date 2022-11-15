@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 
 const mobileMenuList = [
@@ -22,14 +23,14 @@ const mobileMenuList = [
   },
   {
     list: "Condo",
-    list_link: "javascript:void(0)",
+    list_link: "",
     dropDownList: [
       {
-        taglink: "/condoDetails",
+        taglink: "/condo/kotla",
         taglist: "Kalae",
       },
       {
-        taglink: "/detail-condo",
+        taglink: "/condo/jaipur",
         taglist: "Ko'ula",
       },
       {
@@ -57,7 +58,7 @@ const mobileMenuList = [
         taglink: "https://www.kakaako.com/condo/popular-condos/",
         taglist: "Popular Condos in 2022",
       },
-      { taglink: "javascript:void(0)", taglist: "Friend and Family Sale" },
+      { taglink: "", taglist: "Friend and Family Sale" },
     ],
   },
   {
@@ -68,10 +69,10 @@ const mobileMenuList = [
         taglink: "https://www.kakaako.com/buyers/mortgage-calculator/",
         taglist: "Mortgage Calculator",
       },
-      { taglink: "javascript:void(0)", taglist: "Mortgage Pre-Approval" },
-      { taglink: "javascript:void(0)", taglist: "Affordable Housing" },
-      { taglink: "javascript:void(0)", taglist: "First Time Buyers" },
-      { taglink: "javascript:void(0)", taglist: "Personalized Home Search" },
+      { taglink: "", taglist: "Mortgage Pre-Approval" },
+      { taglink: "", taglist: "Affordable Housing" },
+      { taglink: "", taglist: "First Time Buyers" },
+      { taglink: "", taglist: "Personalized Home Search" },
     ],
   },
   {
@@ -82,15 +83,15 @@ const mobileMenuList = [
         taglink: "https://www.kakaako.com/sellers/",
         taglist: " Selling A Home",
       },
-      { taglink: "javascript:void(0)", taglist: "Pricing Your Home" },
-      { taglink: "javascript:void(0)", taglist: "Flat Fee Listing" },
-      { taglink: "javascript:void(0)", taglist: "Virtual Staging" },
-      { taglink: "javascript:void(0)", taglist: "Free Market Analysis" },
+      { taglink: "", taglist: "Pricing Your Home" },
+      { taglink: "", taglist: "Flat Fee Listing" },
+      { taglink: "", taglist: "Virtual Staging" },
+      { taglink: "", taglist: "Free Market Analysis" },
     ],
   },
   {
     list: "Property Management",
-    list_link: "javascript:void(0)",
+    list_link: "",
     dropDownList: [
       {
         taglink: "https://www.happydoorspropertymanagement.com/pricing/",
@@ -107,11 +108,11 @@ const mobileMenuList = [
     list_link: "https://www.kakaako.com/contact/",
     dropDownList: [
       {
-        taglink: "javascript:void(0)",
+        taglink: "",
         taglist: "About",
       },
       {
-        taglink: "javascript:void(0)",
+        taglink: "",
         taglist: "Schedule a Showing",
       },
       {
@@ -146,30 +147,30 @@ const Index = ({ headerBg }) => {
     <>
       <header
         style={{ background: headerBg }}
-        class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---"
+        className="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile ltn__header-logo-and-mobile-menu ltn__header-transparent gradient-color-4---"
       >
         {/*  ltn__header-middle-area start */}
         <div
-          class={`${
+          className={`${
             chColor
               ? "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black sticky-active"
               : "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black"
           }`}
         >
-          <div class="container">
-            <div class="row header_row_wrap">
-              <div class="col-2">
-                <div class="site-logo-wrap">
-                  <div class="site-logo">
-                    <a href="javascript:void(0)">
-                      <img src="images/logo-2.png" alt="Logo" />
+          <div className="container">
+            <div className="row header_row_wrap">
+              <div className="col-2">
+                <div className="site-logo-wrap">
+                  <div className="site-logo">
+                    <a href="">
+                      <img src="/images/logo-2.png" alt="Logo" />
                     </a>
                   </div>
-                  <div class="get-support clearfix d-none">
-                    <div class="get-support-icon">
-                      <i class="icon-call"></i>
+                  <div className="get-support clearfix d-none">
+                    <div className="get-support-icon">
+                      <i className="icon-call"></i>
                     </div>
-                    <div class="get-support-info">
+                    <div className="get-support-info">
                       <h6>Get Support</h6>
                       <h4>
                         <a href="tel:+123456789">123-456-789-10</a>
@@ -178,17 +179,17 @@ const Index = ({ headerBg }) => {
                   </div>
                 </div>
               </div>
-              <div class="col header-menu-column menu-color-white">
-                <div class="header-menu d-none d-xl-block">
+              <div className="col header-menu-column menu-color-white">
+                <div className="header-menu d-none d-xl-block">
                   <nav>
-                    <div class="ltn__main-menu">
+                    <div className="ltn__main-menu">
                       <ul>
                         {mobileMenuList.map((item, index) => (
                           <>
-                            <li key={index} class="menu-icon active">
+                            <li key={index} className="menu-icon active">
                               <a href={item.list_link}>{item.list}</a>
                               <ul
-                                class="sub-menu menu-pages-img-show"
+                                className="sub-menu menu-pages-img-show"
                                 style={{ display: show === "none" }}
                               >
                                 {item.dropDownList.map((item, index) => (
@@ -200,20 +201,20 @@ const Index = ({ headerBg }) => {
                             </li>
                           </>
                         ))}
-                        <li class="special-link">
-                          <a href="javascript:void(0)">Add Listing</a>
+                        <li className="special-link">
+                          <a href="">Add Listing</a>
                         </li>
                       </ul>
                     </div>
                   </nav>
                 </div>
               </div>
-              <div class="col d-none d-xl-block">
-                <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
+              <div className="col d-none d-xl-block">
+                <div className="ltn__drop-menu ltn__currency-menu ltn__language-menu">
                   <ul>
                     <li>
-                      <a href="javascript:void(0)" class="dropdown-toggle">
-                        <span class="active-currency">English</span>
+                      <a href="" className="dropdown-toggle">
+                        <span className="active-currency">English</span>
                       </a>
                       <ul>
                         <li>
@@ -239,16 +240,16 @@ const Index = ({ headerBg }) => {
                   </ul>
                 </div>
               </div>
-              <div class="col--- ltn__header-options ltn__header-options-2">
+              <div className="col--- ltn__header-options ltn__header-options-2">
                 {/*Mobile Menu Button*/}
                 <div
                   onClick={() => setShow(true)}
-                  class="mobile-menu-toggle d-xl-none"
+                  className="mobile-menu-toggle d-xl-none"
                   style={{ display: show === false ? "block" : "none" }}
                 >
                   <a
                     href="#ltn__utilize-mobile-menu"
-                    class="ltn__utilize-toggle"
+                    className="ltn__utilize-toggle"
                   >
                     <svg viewBox="0 0 800 600">
                       <path
@@ -266,12 +267,12 @@ const Index = ({ headerBg }) => {
                 </div>
                 <div
                   onClick={() => setShow(false)}
-                  class="mobile-menu-toggle d-xl-none"
+                  className="mobile-menu-toggle d-xl-none"
                   style={{ display: show === false ? "none" : "block" }}
                 >
                   <a
                     href="#ltn__utilize-mobile-menu"
-                    class="ltn__utilize-toggle"
+                    className="ltn__utilize-toggle"
                   >
                     <img src="/images/close_mobile_menu.svg" alt="close icon" />
                   </a>
@@ -285,39 +286,42 @@ const Index = ({ headerBg }) => {
       {show === true && (
         <div
           id="ltn__utilize-mobile-menu"
-          class="ltn__utilize ltn__utilize-mobile-menu ltn__utilize-open"
+          className="ltn__utilize ltn__utilize-mobile-menu ltn__utilize-open"
         >
-          <div class="ltn__utilize-menu-inner ltn__scrollbar">
-            <div class="ltn__utilize-menu-head">
-              <div class="site-logo">
+          <div className="ltn__utilize-menu-inner ltn__scrollbar">
+            <div className="ltn__utilize-menu-head">
+              <div className="site-logo">
                 <a href="index.html">
                   <img src="images/logo.png" alt="Logo" />
                 </a>
               </div>
-              <button onClick={() => setShow(false)} class="ltn__utilize-close">
+              <button
+                onClick={() => setShow(false)}
+                className="ltn__utilize-close"
+              >
                 ×
               </button>
             </div>
-            <div class="ltn__utilize-menu-search-form">
+            <div className="ltn__utilize-menu-search-form">
               <form action="#">
                 <input type="text" placeholder="Search..." />
                 <button>
-                  <i class="fas fa-search"></i>
+                  <i className="fas fa-search"></i>
                 </button>
               </form>
             </div>
-            <div class="ltn__utilize-menu">
+            <div className="ltn__utilize-menu">
               <ul>
                 {mobileMenuList.map((item, index) => (
                   <>
                     <li
                       onClick={() => setActive(index)}
                       key={index}
-                      class="menu-icon"
+                      className="menu-icon"
                     >
-                      <a class="active">{item.list}</a>
+                      <a className="active">{item.list}</a>
                       <ul
-                        class="sub-menu"
+                        className="sub-menu"
                         style={{ display: active === index ? "block" : "none" }}
                       >
                         {item.dropDownList.map((item, index) => (
@@ -331,20 +335,20 @@ const Index = ({ headerBg }) => {
                 ))}
               </ul>
             </div>
-            <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+            <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
               <ul>
                 <li>
                   <a href="account.html" title="My Account">
-                    <span class="utilize-btn-icon">
-                      <i class="far fa-user"></i>
+                    <span className="utilize-btn-icon">
+                      <i className="far fa-user"></i>
                     </span>
                     My Account
                   </a>
                 </li>
                 <li>
                   <a href="wishlist.html" title="Wishlist">
-                    <span class="utilize-btn-icon">
-                      <i class="far fa-heart"></i>
+                    <span className="utilize-btn-icon">
+                      <i className="far fa-heart"></i>
                       <sup>3</sup>
                     </span>
                     Wishlist
@@ -352,8 +356,8 @@ const Index = ({ headerBg }) => {
                 </li>
                 <li>
                   <a href="cart.html" title="Shoping Cart">
-                    <span class="utilize-btn-icon">
-                      <i class="fas fa-shopping-cart"></i>
+                    <span className="utilize-btn-icon">
+                      <i className="fas fa-shopping-cart"></i>
                       <sup>5</sup>
                     </span>
                     Shoping Cart
@@ -361,26 +365,26 @@ const Index = ({ headerBg }) => {
                 </li>
               </ul>
             </div>
-            <div class="ltn__social-media-2">
+            <div className="ltn__social-media-2">
               <ul>
                 <li>
                   <a href="#" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#" title="Twitter">
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#" title="Linkedin">
-                    <i class="fab fa-linkedin"></i>
+                    <i className="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#" title="Instagram">
-                    <i class="fab fa-instagram"></i>
+                    <i className="fab fa-instagram"></i>
                   </a>
                 </li>
               </ul>

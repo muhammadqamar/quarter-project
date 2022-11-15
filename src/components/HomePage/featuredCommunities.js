@@ -21,7 +21,7 @@ const featureLogo = [
   },
 ];
 
-const FeaturedCommunities = ({data}) => {
+const FeaturedCommunities = ({ data }) => {
   return (
     <div className="main_feature">
       {data?.reportSectionCard?.map((item, index) => (
@@ -43,7 +43,7 @@ const FeaturedCommunities = ({data}) => {
           >
             <h3 className="right_heading">{item?.fields?.cardTitle}</h3>
             <p className="right_para">{item?.fields?.cardDec}</p>
-            <a href="javascript:void(0)" className="feature_link_btn">
+            <a href="#javascript" className="feature_link_btn">
               <span className="inner_link">{item?.fields?.cardBtnTxt}</span>
             </a>
           </div>

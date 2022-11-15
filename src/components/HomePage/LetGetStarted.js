@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const getStart = [
@@ -32,7 +33,7 @@ const featured_communities = [
     heading: "Aalii",
   },
 ];
-const LetGetStarted = ({title,data}) => {
+const LetGetStarted = ({ title, data }) => {
   return (
     <section className="ltn__search-by-place-area section-bg-1 before-bg-top--- bg-image-top--- pt-115 pb-70">
       <div className="container">
@@ -42,7 +43,7 @@ const LetGetStarted = ({title,data}) => {
               <h1 className="section-title">
                 {/* {`Let's Get Started`} */}
                 {data?.startedSectionTitle}
-                </h1>
+              </h1>
             </div>
           </div>
         </div>
@@ -59,12 +60,16 @@ const LetGetStarted = ({title,data}) => {
                     <h3 className="right_heading started_heading">
                       {_data?.fields?.cardTitle}
                     </h3>
-                    <p className="right_para started_para">{_data?.fields?.cardDec}</p>
+                    <p className="right_para started_para">
+                      {_data?.fields?.cardDec}
+                    </p>
                     <a
-                      href="javascript:void(0)"
+                      href="#javascript"
                       className="btn theme-btn-1 theme-btn-2 theme-btn-2 btn-effect-1 text-uppercase"
                     >
-                      <span className="inner_link">{_data?.fields?.cardBtnTxt}</span>
+                      <span className="inner_link">
+                        {_data?.fields?.cardBtnTxt}
+                      </span>
                     </a>
                   </div>
                   <img
@@ -84,7 +89,7 @@ const LetGetStarted = ({title,data}) => {
               <div className="section-title-area ltn__section-title-2--- text-center">
                 <h1 className="section-title">
                   {data?.featuredCommunitiesTitle}
-                  </h1>
+                </h1>
               </div>
             </div>
           </div>
@@ -103,14 +108,16 @@ const LetGetStarted = ({title,data}) => {
                       </h3>
                       {/* <p className="right_para">{item.para}</p> */}
                       <a
-                        href="javascript:void(0)"
+                        href="#javascript"
                         className="btn theme-btn-1 theme-btn-2 theme-btn-2 btn-effect-1 text-uppercase"
                       >
-                        <span className="inner_link">{_data?.fields?.cardBtnTxt}</span>
+                        <span className="inner_link">
+                          {_data?.fields?.cardBtnTxt}
+                        </span>
                       </a>
                     </div>
                     <img
-                    src={_data?.fields?.cardImg?.fields?.file.url}
+                      src={_data?.fields?.cardImg?.fields?.file.url}
                       className="featured_logo text-center bg-cutome-img-lg"
                       alt="house logo"
                     />

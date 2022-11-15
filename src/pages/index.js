@@ -1,28 +1,21 @@
-import { GetStaticPropsContext } from "next";
 import Layout from "../components/Layout";
 import HomePage from "../components/HomePage/index.js";
-import { fetchHome } from "../contentfulApi";
-import { useEffect, useState } from "react";
+import { fetchEntries } from "../contentfulApi";
 
-export default function Home(homePage) {
-  console.log("home page data is here", homePage);
-  const [homeData, setHomeData] = useState([]);
-  useEffect(() => {
-    setHomeData(homePage.homePage);
-  }, [homePage]);
+export default function Home({ homePage }) {
   return (
     <Layout>
-      <HomePage data={homeData[1]} />
+      <HomePage data={homePage?.fields} />
     </Layout>
   );
 }
 
-export async function getStaticProps(context) {
-  const homePage = await fetchHome(context.locale, "home");
+export async function getStaticProps() {
+  const homePage = await fetchEntries("home");
 
   return {
     props: {
-      homePage,
+      homePage: homePage[0],
     },
   };
 }

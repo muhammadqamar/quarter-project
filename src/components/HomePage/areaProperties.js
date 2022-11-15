@@ -10,13 +10,13 @@ const AreaProperties = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: (
-      <a class="slick-prev slick-arrow">
-        <i class="fas fa-arrow-left" alt="Arrow Icon"></i>
+      <a className="slick-prev slick-arrow">
+        <i className="fas fa-arrow-left" alt="Arrow Icon"></i>
       </a>
     ),
     nextArrow: (
-      <a class="slick-next slick-arrow">
-        <i class="fas fa-arrow-right" alt="Arrow Icon"></i>
+      <a className="slick-next slick-arrow">
+        <i className="fas fa-arrow-right" alt="Arrow Icon"></i>
       </a>
     ),
     responsive: [

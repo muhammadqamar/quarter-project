@@ -10,13 +10,13 @@ const NewsBlogs = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: (
-      <a class="slick-prev slick-arrow">
-        <i class="fas fa-arrow-left" alt="Arrow Icon"></i>
+      <a className="slick-prev slick-arrow">
+        <i className="fas fa-arrow-left" alt="Arrow Icon"></i>
       </a>
     ),
     nextArrow: (
-      <a class="slick-next slick-arrow">
-        <i class="fas fa-arrow-right" alt="Arrow Icon"></i>
+      <a className="slick-next slick-arrow">
+        <i className="fas fa-arrow-right" alt="Arrow Icon"></i>
       </a>
     ),
     responsive: [
@@ -97,7 +97,9 @@ const NewsBlogs = () => {
                     </ul>
                   </div>
                   <h3 className="ltn__blog-title">
-                    <a href="blog-details.html">10 Brilliant Ways To Decorate Your Home</a>
+                    <a href="blog-details.html">
+                      10 Brilliant Ways To Decorate Your Home
+                    </a>
                   </h3>
                   <div className="ltn__blog-meta-btn">
                     <div className="ltn__blog-meta">
@@ -138,7 +140,9 @@ const NewsBlogs = () => {
                     </ul>
                   </div>
                   <h3 className="ltn__blog-title">
-                    <a href="blog-details.html">The Most Inspiring Interior Design Of 2021</a>
+                    <a href="blog-details.html">
+                      The Most Inspiring Interior Design Of 2021
+                    </a>
                   </h3>
                   <div className="ltn__blog-meta-btn">
                     <div className="ltn__blog-meta">
@@ -179,7 +183,9 @@ const NewsBlogs = () => {
                     </ul>
                   </div>
                   <h3 className="ltn__blog-title">
-                    <a href="blog-details.html">Recent Commercial Real Estate Transactions</a>
+                    <a href="blog-details.html">
+                      Recent Commercial Real Estate Transactions
+                    </a>
                   </h3>
                   <div className="ltn__blog-meta-btn">
                     <div className="ltn__blog-meta">
@@ -263,7 +269,9 @@ const NewsBlogs = () => {
                     </ul>
                   </div>
                   <h3 className="ltn__blog-title">
-                    <a href="blog-details.html">7 home trends that will shape your house in 2021</a>
+                    <a href="blog-details.html">
+                      7 home trends that will shape your house in 2021
+                    </a>
                   </h3>
                   <div className="ltn__blog-meta-btn">
                     <div className="ltn__blog-meta">

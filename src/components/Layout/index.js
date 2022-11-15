@@ -4,11 +4,11 @@ import Footer from "./Footer";
 
 const Index = ({ props, children, headerBg }) => {
   return (
-    <d>
+    <div>
       <Header headerBg={headerBg} />
       <div {...props}>{children}</div>
       <Footer />
-    </d>
+    </div>
   );
 };
 

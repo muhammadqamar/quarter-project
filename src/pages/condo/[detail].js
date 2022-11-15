@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { fetchHome } from "../../contentfulApi";
+import { fetchEntries } from "../../contentfulApi";
 import Layout from "../../components/Layout";
 import DetailContentCondo from "../../components/detailContentCondo";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 export default function Detail({ condo }) {
   const [pageDetail, setPageDetail] = useState("");
@@ -18,7 +18,7 @@ export default function Detail({ condo }) {
   };
 
   useEffect(() => {
-    setPageDetail(condo?.[0]);
+    setPageDetail(condo?.[0]?.fields);
   }, [condo]);
 
   return (
@@ -43,8 +43,7 @@ export default function Detail({ condo }) {
 
 // Generates `/posts/1` and `/posts/2`
 export async function getStaticPaths(context) {
-  const detailPage = await fetchHome(context.locale, "detailCondo");
-  console.log(detailPage);
+  const detailPage = await fetchEntries("detailCondo");
   const paths = detailPage.filter((condo) => {
     if (condo.pageUrl) {
       return { params: { detail: condo.pageUrl } };
@@ -53,22 +52,19 @@ export async function getStaticPaths(context) {
 
   // { fallback: false } means other routes should 404
   return {
-    paths: [{ params: { detail: "1" } }, { params: { detail: "2" } }],
+    paths,
     fallback: true,
   };
 }
-
 // `getStaticPaths` requires using `getStaticProps`
-export async function getStaticProps({ params, locale }) {
-  console.log("context", params);
-  const detailPage = await fetchHome(locale, "detailCondo");
+export async function getStaticProps({ params }) {
+  const detailPage = await fetchEntries("detailCondo");
   return {
     // Passed to the page component as props
     props: {
-      detailPage,
       condo: detailPage.filter((condo) => {
-        if (condo.pageUrl === params.detail) {
-          return condo;
+        if (condo.fields?.pageUrl === params.detail) {
+          return condo.fields;
         }
       }),
     },

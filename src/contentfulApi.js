@@ -5,13 +5,10 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN, // delivery API key for the space \
 });
 
-export async function fetchEntries({ pageContentType, locale, limit }, query) {
+export async function fetchEntries(pageContentType) {
   try {
     const entries = await client.getEntries({
       content_type: pageContentType,
-      locale,
-      ...query,
-      limit,
     });
 
     if (entries.items) {
@@ -20,15 +17,4 @@ export async function fetchEntries({ pageContentType, locale, limit }, query) {
   } catch (error) {
     console.error(error);
   }
-}
-
-export async function fetchHome(locale,contentType) {
-  const entries = await fetchEntries({
-    contentType: contentType,
-    locale,
-  });
-
-  const docs = entries?.map((entry) => ({ ...entry.fields })) || [];
-
-  return docs;
 }

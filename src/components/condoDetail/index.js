@@ -220,12 +220,12 @@ const Index = () => {
           <div className="col-md-8 left_col">
             <ul className="item_scope">
               <li className="item_list">
-                <a href="javascript:void(0)" className="list_link">
+                <a href="#javascript" className="list_link">
                   Home
                 </a>
               </li>
               <li className="item_list item_current">
-                <a href="javascript:void(0)" className="list_link">
+                <a href="#javascript" className="list_link">
                   Condo
                 </a>
               </li>
@@ -245,7 +245,7 @@ const Index = () => {
               <p key={index} className="left_col_para detail_links">
                 {item.detailPara}
                 <a
-                  href="javascript:void(0)"
+                  href="#javascript"
                   className={
                     (index === 3 && "detail_link mb_link") ||
                     (index === 4 && "detail_link mb_link") ||
